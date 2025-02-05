@@ -1,6 +1,7 @@
 ﻿Public Class Login
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lbUsuario.Click
         lbUsuario.ForeColor = SystemColors.Highlight
+        lbUsuario.ForeColor = SystemColors.Control
 
 
     End Sub
