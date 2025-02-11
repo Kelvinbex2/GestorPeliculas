@@ -88,7 +88,7 @@ Module ConexionBD
             Dim existe As Integer = Convert.ToInt32(cmd.ExecuteScalar())
 
             If existe = 0 Then
-                Return False 
+                Return False
             End If
 
 

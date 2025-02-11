@@ -40,7 +40,7 @@ Partial Class Registrar
         PictureBox7 = New PictureBox()
         PictureBox8 = New PictureBox()
         btmAtras = New Button()
-        TextBox2 = New TextBox()
+        Label1 = New Label()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -225,16 +225,15 @@ Partial Class Registrar
         btmAtras.TabIndex = 16
         btmAtras.UseVisualStyleBackColor = False
         ' 
-        ' TextBox2
+        ' Label1
         ' 
-        TextBox2.BackColor = Color.Thistle
-        TextBox2.Font = New Font("Segoe UI", 30F, FontStyle.Bold Or FontStyle.Italic)
-        TextBox2.ForeColor = Color.Black
-        TextBox2.Location = New Point(128, 12)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(419, 61)
-        TextBox2.TabIndex = 17
-        TextBox2.Text = "CREAR UNA CUENTA"
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 30F, FontStyle.Bold Or FontStyle.Italic)
+        Label1.Location = New Point(119, 9)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(418, 54)
+        Label1.TabIndex = 17
+        Label1.Text = "CREAR UNA CUENTA"
         ' 
         ' Registrar
         ' 
@@ -242,7 +241,7 @@ Partial Class Registrar
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Thistle
         ClientSize = New Size(633, 612)
-        Controls.Add(TextBox2)
+        Controls.Add(Label1)
         Controls.Add(btmAtras)
         Controls.Add(PictureBox8)
         Controls.Add(PictureBox7)
@@ -291,5 +290,5 @@ Partial Class Registrar
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents btmAtras As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label1 As Label
 End Class

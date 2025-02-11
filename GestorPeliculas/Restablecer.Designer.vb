@@ -23,7 +23,6 @@ Partial Class Restablecer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Restablecer))
-        TextBox1 = New TextBox()
         Panel1 = New Panel()
         txtEmail = New TextBox()
         txtContraseña = New TextBox()
@@ -33,21 +32,9 @@ Partial Class Restablecer
         btnRes = New Button()
         PictureBox8 = New PictureBox()
         btmAtras = New Button()
-        txtDni = New TextBox()
-        Panel4 = New Panel()
+        Label1 = New Label()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.BackColor = Color.Thistle
-        TextBox1.Font = New Font("Segoe UI", 25.0F, FontStyle.Bold Or FontStyle.Italic)
-        TextBox1.ForeColor = Color.Black
-        TextBox1.Location = New Point(176, 23)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(458, 52)
-        TextBox1.TabIndex = 0
-        TextBox1.Text = "RESTABLECER CONTRASEÑA"
         ' 
         ' Panel1
         ' 
@@ -72,7 +59,7 @@ Partial Class Restablecer
         ' 
         txtContraseña.BackColor = SystemColors.Control
         txtContraseña.BorderStyle = BorderStyle.None
-        txtContraseña.Location = New Point(285, 307)
+        txtContraseña.Location = New Point(285, 262)
         txtContraseña.Multiline = True
         txtContraseña.Name = "txtContraseña"
         txtContraseña.PlaceholderText = "Nueva Contraseña"
@@ -82,7 +69,7 @@ Partial Class Restablecer
         ' Panel2
         ' 
         Panel2.BackColor = SystemColors.ActiveCaptionText
-        Panel2.Location = New Point(285, 332)
+        Panel2.Location = New Point(285, 287)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(195, 1)
         Panel2.TabIndex = 3
@@ -91,7 +78,7 @@ Partial Class Restablecer
         ' 
         txtNueContraseña.BackColor = SystemColors.Control
         txtNueContraseña.BorderStyle = BorderStyle.None
-        txtNueContraseña.Location = New Point(285, 347)
+        txtNueContraseña.Location = New Point(285, 302)
         txtNueContraseña.Multiline = True
         txtNueContraseña.Name = "txtNueContraseña"
         txtNueContraseña.PlaceholderText = "Repitir Contraseña"
@@ -101,7 +88,7 @@ Partial Class Restablecer
         ' Panel3
         ' 
         Panel3.BackColor = SystemColors.ActiveCaptionText
-        Panel3.Location = New Point(285, 372)
+        Panel3.Location = New Point(285, 327)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(195, 1)
         Panel3.TabIndex = 5
@@ -113,7 +100,7 @@ Partial Class Restablecer
         btnRes.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btnRes.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btnRes.FlatStyle = FlatStyle.Popup
-        btnRes.Location = New Point(328, 398)
+        btnRes.Location = New Point(328, 353)
         btnRes.Name = "btnRes"
         btnRes.Size = New Size(99, 29)
         btnRes.TabIndex = 7
@@ -146,33 +133,23 @@ Partial Class Restablecer
         btmAtras.TabIndex = 17
         btmAtras.UseVisualStyleBackColor = False
         ' 
-        ' txtDni
+        ' Label1
         ' 
-        txtDni.BackColor = SystemColors.Control
-        txtDni.BorderStyle = BorderStyle.None
-        txtDni.Location = New Point(285, 266)
-        txtDni.Multiline = True
-        txtDni.Name = "txtDni"
-        txtDni.PlaceholderText = "Dni"
-        txtDni.Size = New Size(195, 23)
-        txtDni.TabIndex = 19
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = SystemColors.ActiveCaptionText
-        Panel4.Location = New Point(285, 291)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(195, 1)
-        Panel4.TabIndex = 18
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 30F, FontStyle.Bold Or FontStyle.Italic)
+        Label1.Location = New Point(121, 9)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(558, 54)
+        Label1.TabIndex = 20
+        Label1.Text = "RESTABLECER CONTRASEÑA"
         ' 
         ' Restablecer
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Thistle
         ClientSize = New Size(741, 450)
-        Controls.Add(txtDni)
-        Controls.Add(Panel4)
+        Controls.Add(Label1)
         Controls.Add(btmAtras)
         Controls.Add(PictureBox8)
         Controls.Add(btnRes)
@@ -182,15 +159,12 @@ Partial Class Restablecer
         Controls.Add(Panel2)
         Controls.Add(txtEmail)
         Controls.Add(Panel1)
-        Controls.Add(TextBox1)
         Name = "Restablecer"
         Text = "Restablecer"
         CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtContraseña As TextBox
@@ -200,6 +174,5 @@ Partial Class Restablecer
     Friend WithEvents btnRes As Button
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents btmAtras As Button
-    Friend WithEvents txtDni As TextBox
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label1 As Label
 End Class

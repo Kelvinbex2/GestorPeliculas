@@ -122,7 +122,7 @@ Partial Class Login
         btnRegistrar.FlatStyle = FlatStyle.Flat
         btnRegistrar.Font = New Font("Segoe UI", 10F)
         btnRegistrar.ForeColor = Color.DarkMagenta
-        btnRegistrar.Location = New Point(247, 414)
+        btnRegistrar.Location = New Point(235, 417)
         btnRegistrar.Name = "btnRegistrar"
         btnRegistrar.Size = New Size(77, 26)
         btnRegistrar.TabIndex = 7
