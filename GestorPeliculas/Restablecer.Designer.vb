@@ -65,6 +65,7 @@ Partial Class Restablecer
         txtContraseña.PlaceholderText = "Nueva Contraseña"
         txtContraseña.Size = New Size(195, 23)
         txtContraseña.TabIndex = 4
+        txtContraseña.UseSystemPasswordChar = True
         ' 
         ' Panel2
         ' 
@@ -84,6 +85,7 @@ Partial Class Restablecer
         txtNueContraseña.PlaceholderText = "Repitir Contraseña"
         txtNueContraseña.Size = New Size(195, 23)
         txtNueContraseña.TabIndex = 6
+        txtNueContraseña.UseSystemPasswordChar = True
         ' 
         ' Panel3
         ' 

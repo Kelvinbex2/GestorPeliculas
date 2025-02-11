@@ -66,6 +66,7 @@ Partial Class Login
         txtPassword.Size = New Size(178, 23)
         txtPassword.TabIndex = 2
         txtPassword.TextAlign = HorizontalAlignment.Center
+        txtPassword.UseSystemPasswordChar = True
         ' 
         ' btnRestablecer
         ' 

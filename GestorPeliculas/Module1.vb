@@ -39,75 +39,75 @@ Module ConexionBD
         End Using
     End Function
 
-
-
     Public Function InsertarCliente(dni As String, nombre As String, apellidos As String, telefono As String, email As String, direccion As String, contraseña As String) As Boolean
-        Dim conn As SQLiteConnection = ObtenerConexion()
-        Dim cmd As SQLiteCommand = Nothing
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Try
+                conn.Open()
 
-        Try
-            conn.Open()
-            Dim query As String = "INSERT INTO Cliente (dni, nombre, apellidos, telefono, email, direccion, contraseña) VALUES (@dni, @nombre, @apellidos, @telefono, @email, @direccion, @contraseña)"
 
-            cmd = New SQLiteCommand(query, conn)
-            cmd.Parameters.AddWithValue("@dni", dni)
-            cmd.Parameters.AddWithValue("@nombre", nombre)
-            cmd.Parameters.AddWithValue("@apellidos", apellidos)
-            cmd.Parameters.AddWithValue("@telefono", telefono)
-            cmd.Parameters.AddWithValue("@email", email)
-            cmd.Parameters.AddWithValue("@direccion", direccion)
-            cmd.Parameters.AddWithValue("@contraseña", contraseña)
+                Dim adaptador As New SQLiteDataAdapter("SELECT * FROM Cliente", conn)
+                Dim dataSet As New DataSet()
 
-            Dim filasAfectadas As Integer = cmd.ExecuteNonQuery()
-            Return filasAfectadas > 0
-        Catch ex As SQLiteException When ex.ErrorCode = SQLiteErrorCode.Constraint
-            MessageBox.Show("El DNI o el Email ya están registrados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
-        Catch ex As Exception
-            Console.WriteLine("Error al insertar el cliente: " & ex.Message)
-            Return False
-        Finally
-            If cmd IsNot Nothing Then cmd.Dispose()
-            If conn IsNot Nothing AndAlso conn.State = ConnectionState.Open Then conn.Close()
-        End Try
+
+                adaptador.Fill(dataSet, "Cliente")
+
+
+                Dim nuevaFila As DataRow = dataSet.Tables("Cliente").NewRow()
+                nuevaFila("dni") = dni
+                nuevaFila("nombre") = nombre
+                nuevaFila("apellidos") = apellidos
+                nuevaFila("telefono") = telefono
+                nuevaFila("email") = email
+                nuevaFila("direccion") = direccion
+                nuevaFila("contraseña") = contraseña
+
+
+                dataSet.Tables("Cliente").Rows.Add(nuevaFila)
+
+                Dim commandBuilder As New SQLiteCommandBuilder(adaptador)
+                adaptador.Update(dataSet, "Cliente")
+
+                Return True
+            Catch ex As SQLiteException When ex.ErrorCode = SQLiteErrorCode.Constraint
+                MessageBox.Show("El DNI o el Email ya están registrados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            Catch ex As Exception
+                Console.WriteLine("Error al insertar el cliente: " & ex.Message)
+                Return False
+            End Try
+        End Using
     End Function
 
     Public Function RestablecerContraseña(email As String, nuevaContraseña As String) As Boolean
-        Dim conn As SQLiteConnection = ObtenerConexion()
-        Dim cmd As SQLiteCommand = Nothing
-        Dim filasAfectadas As Integer = 0
-
-        Try
-            conn.Open()
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Try
+                conn.Open()
 
 
-            Dim verificarQuery As String = "SELECT COUNT(*) FROM Cliente WHERE email = @email"
-            cmd = New SQLiteCommand(verificarQuery, conn)
-            cmd.Parameters.AddWithValue("@email", email)
+                Dim adaptador As New SQLiteDataAdapter("SELECT * FROM Cliente WHERE email = @email", conn)
+                adaptador.SelectCommand.Parameters.AddWithValue("@email", email)
 
-            Dim existe As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                Dim dataSet As New DataSet()
+                adaptador.Fill(dataSet, "Cliente")
 
-            If existe = 0 Then
+
+                If dataSet.Tables("Cliente").Rows.Count = 0 Then
+                    Return False
+                End If
+
+
+                Dim fila As DataRow = dataSet.Tables("Cliente").Rows(0)
+                fila("contraseña") = nuevaContraseña
+
+
+                Dim commandBuilder As New SQLiteCommandBuilder(adaptador)
+                adaptador.Update(dataSet, "Cliente")
+
+                Return True
+            Catch ex As Exception
+                Console.WriteLine("Error al restablecer la contraseña: " & ex.Message)
                 Return False
-            End If
-
-
-            Dim updateQuery As String = "UPDATE Cliente SET contraseña = @contraseña WHERE email = @email"
-            cmd = New SQLiteCommand(updateQuery, conn)
-            cmd.Parameters.AddWithValue("@contraseña", nuevaContraseña)
-            cmd.Parameters.AddWithValue("@email", email)
-
-            filasAfectadas = cmd.ExecuteNonQuery()
-        Catch ex As Exception
-            Console.WriteLine("Error al restablecer la contraseña: " & ex.Message)
-        Finally
-
-            If cmd IsNot Nothing Then cmd.Dispose()
-            If conn IsNot Nothing AndAlso conn.State = ConnectionState.Open Then conn.Close()
-        End Try
-
-        Return filasAfectadas > 0
+            End Try
+        End Using
     End Function
-
-
 End Module

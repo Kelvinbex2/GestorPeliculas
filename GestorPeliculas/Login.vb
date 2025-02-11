@@ -4,7 +4,7 @@
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbUsuario.Text = "Usuario"
         lbAdmin.Text = "Cambiar a Admin"
-        txtPassword.UseSystemPasswordChar = True
+
     End Sub
 
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click

@@ -106,6 +106,7 @@ Partial Class Registrar
         TextBox1.PlaceholderText = "Contraseña"
         TextBox1.Size = New Size(155, 23)
         TextBox1.TabIndex = 6
+        TextBox1.UseSystemPasswordChar = True
         ' 
         ' btnRegistar
         ' 
