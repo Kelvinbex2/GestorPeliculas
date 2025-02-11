@@ -30,7 +30,7 @@ Partial Class Login
         PictureBox2 = New PictureBox()
         PictureBox3 = New PictureBox()
         btnIniciar = New Button()
-        Button1 = New Button()
+        btnRegistrar = New Button()
         lbUsuario = New Label()
         Panel1 = New Panel()
         lbAdmin = New Label()
@@ -84,6 +84,7 @@ Partial Class Login
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.BackColor = Color.AliceBlue
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
         PictureBox2.Location = New Point(171, 233)
         PictureBox2.Name = "PictureBox2"
@@ -94,6 +95,7 @@ Partial Class Login
         ' 
         ' PictureBox3
         ' 
+        PictureBox3.BackColor = Color.AliceBlue
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
         PictureBox3.Location = New Point(171, 276)
         PictureBox3.Name = "PictureBox3"
@@ -104,7 +106,7 @@ Partial Class Login
         ' 
         ' btnIniciar
         ' 
-        btnIniciar.BackColor = SystemColors.Control
+        btnIniciar.BackColor = Color.AliceBlue
         btnIniciar.Font = New Font("Segoe UI", 14F)
         btnIniciar.ForeColor = Color.DarkMagenta
         btnIniciar.Location = New Point(197, 376)
@@ -114,23 +116,23 @@ Partial Class Login
         btnIniciar.Text = "Iniciar session"
         btnIniciar.UseVisualStyleBackColor = False
         ' 
-        ' Button1
+        ' btnRegistrar
         ' 
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 10F)
-        Button1.ForeColor = Color.DarkMagenta
-        Button1.Location = New Point(247, 414)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(77, 26)
-        Button1.TabIndex = 7
-        Button1.Text = "Registrar"
-        Button1.UseVisualStyleBackColor = True
+        btnRegistrar.FlatAppearance.BorderSize = 0
+        btnRegistrar.FlatStyle = FlatStyle.Flat
+        btnRegistrar.Font = New Font("Segoe UI", 10F)
+        btnRegistrar.ForeColor = Color.DarkMagenta
+        btnRegistrar.Location = New Point(247, 414)
+        btnRegistrar.Name = "btnRegistrar"
+        btnRegistrar.Size = New Size(77, 26)
+        btnRegistrar.TabIndex = 7
+        btnRegistrar.Text = "Registrar"
+        btnRegistrar.UseVisualStyleBackColor = True
         ' 
         ' lbUsuario
         ' 
         lbUsuario.AutoSize = True
-        lbUsuario.Location = New Point(239, 204)
+        lbUsuario.Location = New Point(235, 204)
         lbUsuario.Name = "lbUsuario"
         lbUsuario.Size = New Size(47, 15)
         lbUsuario.TabIndex = 8
@@ -139,7 +141,7 @@ Partial Class Login
         ' Panel1
         ' 
         Panel1.BackColor = SystemColors.ActiveCaptionText
-        Panel1.Location = New Point(292, 202)
+        Panel1.Location = New Point(288, 202)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1, 20)
         Panel1.TabIndex = 9
@@ -147,7 +149,7 @@ Partial Class Login
         ' lbAdmin
         ' 
         lbAdmin.AutoSize = True
-        lbAdmin.Location = New Point(299, 204)
+        lbAdmin.Location = New Point(295, 204)
         lbAdmin.Name = "lbAdmin"
         lbAdmin.Size = New Size(43, 15)
         lbAdmin.TabIndex = 10
@@ -157,11 +159,12 @@ Partial Class Login
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.Lavender
         ClientSize = New Size(557, 497)
         Controls.Add(lbAdmin)
         Controls.Add(Panel1)
         Controls.Add(lbUsuario)
-        Controls.Add(Button1)
+        Controls.Add(btnRegistrar)
         Controls.Add(btnIniciar)
         Controls.Add(PictureBox3)
         Controls.Add(PictureBox2)
@@ -184,7 +187,7 @@ Partial Class Login
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnIniciar As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegistrar As Button
     Friend WithEvents lbUsuario As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lbAdmin As Label
