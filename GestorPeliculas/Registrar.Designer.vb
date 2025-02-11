@@ -40,6 +40,7 @@ Partial Class Registrar
         PictureBox7 = New PictureBox()
         PictureBox8 = New PictureBox()
         btmAtras = New Button()
+        TextBox2 = New TextBox()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +53,7 @@ Partial Class Registrar
         ' 
         ' txtDni
         ' 
-        txtDni.Location = New Point(212, 161)
+        txtDni.Location = New Point(257, 231)
         txtDni.Name = "txtDni"
         txtDni.PlaceholderText = "Dni"
         txtDni.Size = New Size(155, 23)
@@ -60,7 +61,7 @@ Partial Class Registrar
         ' 
         ' txtNombre
         ' 
-        txtNombre.Location = New Point(212, 210)
+        txtNombre.Location = New Point(257, 280)
         txtNombre.Name = "txtNombre"
         txtNombre.PlaceholderText = "Nombre"
         txtNombre.Size = New Size(155, 23)
@@ -68,7 +69,7 @@ Partial Class Registrar
         ' 
         ' txtApel
         ' 
-        txtApel.Location = New Point(212, 255)
+        txtApel.Location = New Point(257, 325)
         txtApel.Name = "txtApel"
         txtApel.PlaceholderText = "Apellidos"
         txtApel.Size = New Size(155, 23)
@@ -76,7 +77,7 @@ Partial Class Registrar
         ' 
         ' txtTlf
         ' 
-        txtTlf.Location = New Point(212, 347)
+        txtTlf.Location = New Point(257, 417)
         txtTlf.Name = "txtTlf"
         txtTlf.PlaceholderText = "Telefono"
         txtTlf.Size = New Size(155, 23)
@@ -84,7 +85,7 @@ Partial Class Registrar
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(212, 432)
+        txtEmail.Location = New Point(257, 502)
         txtEmail.Name = "txtEmail"
         txtEmail.PlaceholderText = "Email"
         txtEmail.Size = New Size(155, 23)
@@ -92,7 +93,7 @@ Partial Class Registrar
         ' 
         ' txtDir
         ' 
-        txtDir.Location = New Point(212, 300)
+        txtDir.Location = New Point(257, 370)
         txtDir.Name = "txtDir"
         txtDir.PlaceholderText = "Dirección"
         txtDir.Size = New Size(155, 23)
@@ -100,7 +101,7 @@ Partial Class Registrar
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(212, 389)
+        TextBox1.Location = New Point(257, 459)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Contraseña"
         TextBox1.Size = New Size(155, 23)
@@ -114,7 +115,7 @@ Partial Class Registrar
         btnRegistar.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btnRegistar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btnRegistar.FlatStyle = FlatStyle.Popup
-        btnRegistar.Location = New Point(238, 478)
+        btnRegistar.Location = New Point(283, 548)
         btnRegistar.Name = "btnRegistar"
         btnRegistar.Size = New Size(100, 23)
         btnRegistar.TabIndex = 7
@@ -125,7 +126,7 @@ Partial Class Registrar
         ' 
         PictureBox2.BackColor = Color.GhostWhite
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(186, 161)
+        PictureBox2.Location = New Point(231, 231)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(20, 23)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -136,7 +137,7 @@ Partial Class Registrar
         ' 
         PictureBox1.BackColor = Color.GhostWhite
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(186, 210)
+        PictureBox1.Location = New Point(231, 280)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(20, 23)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -147,7 +148,7 @@ Partial Class Registrar
         ' 
         PictureBox3.BackColor = Color.GhostWhite
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(186, 255)
+        PictureBox3.Location = New Point(231, 325)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(20, 23)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
@@ -158,7 +159,7 @@ Partial Class Registrar
         ' 
         PictureBox4.BackColor = Color.GhostWhite
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(186, 389)
+        PictureBox4.Location = New Point(231, 459)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(20, 23)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -169,7 +170,7 @@ Partial Class Registrar
         ' 
         PictureBox5.BackColor = Color.GhostWhite
         PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(186, 300)
+        PictureBox5.Location = New Point(231, 370)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(20, 23)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
@@ -180,7 +181,7 @@ Partial Class Registrar
         ' 
         PictureBox6.BackColor = Color.GhostWhite
         PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(186, 347)
+        PictureBox6.Location = New Point(231, 417)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(20, 23)
         PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
@@ -191,7 +192,7 @@ Partial Class Registrar
         ' 
         PictureBox7.BackColor = Color.GhostWhite
         PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(186, 432)
+        PictureBox7.Location = New Point(231, 502)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(20, 23)
         PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
@@ -201,7 +202,7 @@ Partial Class Registrar
         ' PictureBox8
         ' 
         PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(227, 28)
+        PictureBox8.Location = New Point(269, 90)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(114, 109)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
@@ -218,18 +219,30 @@ Partial Class Registrar
         btmAtras.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btmAtras.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btmAtras.FlatStyle = FlatStyle.Popup
-        btmAtras.Location = New Point(12, 508)
+        btmAtras.Location = New Point(12, 560)
         btmAtras.Name = "btmAtras"
         btmAtras.Size = New Size(40, 40)
         btmAtras.TabIndex = 16
         btmAtras.UseVisualStyleBackColor = False
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.Thistle
+        TextBox2.Font = New Font("Segoe UI", 30F, FontStyle.Bold Or FontStyle.Italic)
+        TextBox2.ForeColor = Color.Black
+        TextBox2.Location = New Point(128, 12)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(419, 61)
+        TextBox2.TabIndex = 17
+        TextBox2.Text = "CREAR UNA CUENTA"
         ' 
         ' Registrar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Thistle
-        ClientSize = New Size(601, 549)
+        ClientSize = New Size(633, 612)
+        Controls.Add(TextBox2)
         Controls.Add(btmAtras)
         Controls.Add(PictureBox8)
         Controls.Add(PictureBox7)
@@ -278,4 +291,5 @@ Partial Class Registrar
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents btmAtras As Button
+    Friend WithEvents TextBox2 As TextBox
 End Class

@@ -40,7 +40,8 @@
 
 
     Private Sub btnRestablecer_Click(sender As Object, e As EventArgs) Handles btnRestablecer.Click
-        MessageBox.Show("Restablecer contraseña funcionalidad no implementada.", "Restablecer", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Restablecer.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click

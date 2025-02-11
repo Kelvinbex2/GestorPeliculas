@@ -72,7 +72,42 @@ Module ConexionBD
         End Try
     End Function
 
+    Public Function RestablecerContraseña(email As String, nuevaContraseña As String) As Boolean
+        Dim conn As SQLiteConnection = ObtenerConexion()
+        Dim cmd As SQLiteCommand = Nothing
+        Dim filasAfectadas As Integer = 0
 
+        Try
+            conn.Open()
+
+
+            Dim verificarQuery As String = "SELECT COUNT(*) FROM Cliente WHERE email = @email"
+            cmd = New SQLiteCommand(verificarQuery, conn)
+            cmd.Parameters.AddWithValue("@email", email)
+
+            Dim existe As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            If existe = 0 Then
+                Return False 
+            End If
+
+
+            Dim updateQuery As String = "UPDATE Cliente SET contraseña = @contraseña WHERE email = @email"
+            cmd = New SQLiteCommand(updateQuery, conn)
+            cmd.Parameters.AddWithValue("@contraseña", nuevaContraseña)
+            cmd.Parameters.AddWithValue("@email", email)
+
+            filasAfectadas = cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Console.WriteLine("Error al restablecer la contraseña: " & ex.Message)
+        Finally
+
+            If cmd IsNot Nothing Then cmd.Dispose()
+            If conn IsNot Nothing AndAlso conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+
+        Return filasAfectadas > 0
+    End Function
 
 
 End Module
