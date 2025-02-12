@@ -13,7 +13,8 @@
 
         If esAdmin Then
             If VerificarCredenciales(usuario, contrasena, True) Then
-                MessageBox.Show("¡Bienvenido Administrador!", "Acceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                admin.Show()
+                Me.Hide()
             Else
                 MessageBox.Show("Credenciales de administrador incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
