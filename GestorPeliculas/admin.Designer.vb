@@ -28,18 +28,23 @@ Partial Class admin
         PictureBox8 = New PictureBox()
         TextBox1 = New TextBox()
         Panel1 = New Panel()
-        txtEmail = New TextBox()
-        Panel2 = New Panel()
-        TextBox2 = New TextBox()
-        Panel3 = New Panel()
-        TextBox3 = New TextBox()
-        Panel4 = New Panel()
-        TextBox4 = New TextBox()
-        Panel5 = New Panel()
-        TextBox5 = New TextBox()
-        Panel6 = New Panel()
         TextBox6 = New TextBox()
         Panel7 = New Panel()
+        txtId = New TextBox()
+        Panel2 = New Panel()
+        TextBoxNombre = New TextBox()
+        Panel3 = New Panel()
+        TextApel = New TextBox()
+        Panel4 = New Panel()
+        TextTlf = New TextBox()
+        Panel5 = New Panel()
+        TextEmail = New TextBox()
+        Panel6 = New Panel()
+        TextContra = New TextBox()
+        Panel8 = New Panel()
+        btnAcep = New Button()
+        AgregarAdminToolStripMenuItem = New ToolStripMenuItem()
+        BajaUnClienteToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -47,7 +52,7 @@ Partial Class admin
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {MenuToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {MenuToolStripMenuItem, AgregarAdminToolStripMenuItem, BajaUnClienteToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(800, 24)
@@ -63,7 +68,7 @@ Partial Class admin
         ' PictureBox8
         ' 
         PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(12, 27)
+        PictureBox8.Location = New Point(12, 68)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(114, 109)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
@@ -74,8 +79,8 @@ Partial Class admin
         ' 
         TextBox1.BackColor = SystemColors.Control
         TextBox1.Enabled = False
-        TextBox1.Font = New Font("MV Boli", 20.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(132, 27)
+        TextBox1.Font = New Font("MV Boli", 20.25F, FontStyle.Italic, GraphicsUnit.Point, 0)
+        TextBox1.Location = New Point(168, 178)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(239, 51)
         TextBox1.TabIndex = 20
@@ -89,101 +94,6 @@ Partial Class admin
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1, 520)
         Panel1.TabIndex = 21
-        ' 
-        ' txtEmail
-        ' 
-        txtEmail.BackColor = SystemColors.Control
-        txtEmail.BorderStyle = BorderStyle.None
-        txtEmail.Location = New Point(12, 175)
-        txtEmail.Multiline = True
-        txtEmail.Name = "txtEmail"
-        txtEmail.PlaceholderText = "Email"
-        txtEmail.Size = New Size(195, 23)
-        txtEmail.TabIndex = 23
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = SystemColors.ActiveCaptionText
-        Panel2.Location = New Point(12, 199)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(195, 1)
-        Panel2.TabIndex = 22
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = SystemColors.Control
-        TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Location = New Point(12, 236)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.PlaceholderText = "Email"
-        TextBox2.Size = New Size(195, 23)
-        TextBox2.TabIndex = 25
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = SystemColors.ActiveCaptionText
-        Panel3.Location = New Point(12, 260)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(195, 1)
-        Panel3.TabIndex = 24
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.BackColor = SystemColors.Control
-        TextBox3.BorderStyle = BorderStyle.None
-        TextBox3.Location = New Point(12, 308)
-        TextBox3.Multiline = True
-        TextBox3.Name = "TextBox3"
-        TextBox3.PlaceholderText = "Email"
-        TextBox3.Size = New Size(195, 23)
-        TextBox3.TabIndex = 27
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = SystemColors.ActiveCaptionText
-        Panel4.Location = New Point(12, 332)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(195, 1)
-        Panel4.TabIndex = 26
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.BackColor = SystemColors.Control
-        TextBox4.BorderStyle = BorderStyle.None
-        TextBox4.Location = New Point(12, 383)
-        TextBox4.Multiline = True
-        TextBox4.Name = "TextBox4"
-        TextBox4.PlaceholderText = "Email"
-        TextBox4.Size = New Size(195, 23)
-        TextBox4.TabIndex = 29
-        ' 
-        ' Panel5
-        ' 
-        Panel5.BackColor = SystemColors.ActiveCaptionText
-        Panel5.Location = New Point(12, 407)
-        Panel5.Name = "Panel5"
-        Panel5.Size = New Size(195, 1)
-        Panel5.TabIndex = 28
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.BackColor = SystemColors.Control
-        TextBox5.BorderStyle = BorderStyle.None
-        TextBox5.Location = New Point(12, 457)
-        TextBox5.Multiline = True
-        TextBox5.Name = "TextBox5"
-        TextBox5.PlaceholderText = "Email"
-        TextBox5.Size = New Size(195, 23)
-        TextBox5.TabIndex = 31
-        ' 
-        ' Panel6
-        ' 
-        Panel6.BackColor = SystemColors.ActiveCaptionText
-        Panel6.Location = New Point(12, 481)
-        Panel6.Name = "Panel6"
-        Panel6.Size = New Size(195, 1)
-        Panel6.TabIndex = 30
         ' 
         ' TextBox6
         ' 
@@ -204,20 +114,158 @@ Partial Class admin
         Panel7.Size = New Size(195, 1)
         Panel7.TabIndex = 3
         ' 
+        ' txtId
+        ' 
+        txtId.BackColor = SystemColors.Control
+        txtId.BorderStyle = BorderStyle.None
+        txtId.Location = New Point(10, 255)
+        txtId.Multiline = True
+        txtId.Name = "txtId"
+        txtId.PlaceholderText = "Id"
+        txtId.Size = New Size(195, 23)
+        txtId.TabIndex = 23
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = SystemColors.ActiveCaptionText
+        Panel2.Location = New Point(10, 279)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(195, 1)
+        Panel2.TabIndex = 22
+        ' 
+        ' TextBoxNombre
+        ' 
+        TextBoxNombre.BackColor = SystemColors.Control
+        TextBoxNombre.BorderStyle = BorderStyle.None
+        TextBoxNombre.Location = New Point(10, 302)
+        TextBoxNombre.Multiline = True
+        TextBoxNombre.Name = "TextBoxNombre"
+        TextBoxNombre.PlaceholderText = "Nombre"
+        TextBoxNombre.Size = New Size(195, 23)
+        TextBoxNombre.TabIndex = 25
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = SystemColors.ActiveCaptionText
+        Panel3.Location = New Point(10, 326)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(195, 1)
+        Panel3.TabIndex = 24
+        ' 
+        ' TextApel
+        ' 
+        TextApel.BackColor = SystemColors.Control
+        TextApel.BorderStyle = BorderStyle.None
+        TextApel.Location = New Point(10, 346)
+        TextApel.Multiline = True
+        TextApel.Name = "TextApel"
+        TextApel.PlaceholderText = "Apellido"
+        TextApel.Size = New Size(195, 23)
+        TextApel.TabIndex = 27
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = SystemColors.ActiveCaptionText
+        Panel4.Location = New Point(10, 370)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(195, 1)
+        Panel4.TabIndex = 26
+        ' 
+        ' TextTlf
+        ' 
+        TextTlf.BackColor = SystemColors.Control
+        TextTlf.BorderStyle = BorderStyle.None
+        TextTlf.Location = New Point(10, 390)
+        TextTlf.Multiline = True
+        TextTlf.Name = "TextTlf"
+        TextTlf.PlaceholderText = "Telefono"
+        TextTlf.Size = New Size(195, 23)
+        TextTlf.TabIndex = 29
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = SystemColors.ActiveCaptionText
+        Panel5.Location = New Point(10, 414)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(195, 1)
+        Panel5.TabIndex = 28
+        ' 
+        ' TextEmail
+        ' 
+        TextEmail.BackColor = SystemColors.Control
+        TextEmail.BorderStyle = BorderStyle.None
+        TextEmail.Location = New Point(10, 431)
+        TextEmail.Multiline = True
+        TextEmail.Name = "TextEmail"
+        TextEmail.PlaceholderText = "Email"
+        TextEmail.Size = New Size(195, 23)
+        TextEmail.TabIndex = 31
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = SystemColors.ActiveCaptionText
+        Panel6.Location = New Point(10, 455)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(195, 1)
+        Panel6.TabIndex = 30
+        ' 
+        ' TextContra
+        ' 
+        TextContra.BackColor = SystemColors.Control
+        TextContra.BorderStyle = BorderStyle.None
+        TextContra.Location = New Point(10, 473)
+        TextContra.Multiline = True
+        TextContra.Name = "TextContra"
+        TextContra.PlaceholderText = "Contraseña"
+        TextContra.Size = New Size(195, 23)
+        TextContra.TabIndex = 33
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = SystemColors.ActiveCaptionText
+        Panel8.Location = New Point(10, 497)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(195, 1)
+        Panel8.TabIndex = 32
+        ' 
+        ' btnAcep
+        ' 
+        btnAcep.Location = New Point(101, 524)
+        btnAcep.Name = "btnAcep"
+        btnAcep.Size = New Size(75, 23)
+        btnAcep.TabIndex = 34
+        btnAcep.Text = "Aceptar"
+        btnAcep.UseVisualStyleBackColor = True
+        ' 
+        ' AgregarAdminToolStripMenuItem
+        ' 
+        AgregarAdminToolStripMenuItem.Name = "AgregarAdminToolStripMenuItem"
+        AgregarAdminToolStripMenuItem.Size = New Size(98, 20)
+        AgregarAdminToolStripMenuItem.Text = "Agregar admin"
+        ' 
+        ' BajaUnClienteToolStripMenuItem
+        ' 
+        BajaUnClienteToolStripMenuItem.Name = "BajaUnClienteToolStripMenuItem"
+        BajaUnClienteToolStripMenuItem.Size = New Size(96, 20)
+        BajaUnClienteToolStripMenuItem.Text = "Baja un cliente"
+        ' 
         ' admin
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 544)
-        Controls.Add(TextBox5)
+        ClientSize = New Size(800, 583)
+        Controls.Add(btnAcep)
+        Controls.Add(TextContra)
+        Controls.Add(Panel8)
+        Controls.Add(TextEmail)
         Controls.Add(Panel6)
-        Controls.Add(TextBox4)
+        Controls.Add(TextTlf)
         Controls.Add(Panel5)
-        Controls.Add(TextBox3)
+        Controls.Add(TextApel)
         Controls.Add(Panel4)
-        Controls.Add(TextBox2)
+        Controls.Add(TextBoxNombre)
         Controls.Add(Panel3)
-        Controls.Add(txtEmail)
+        Controls.Add(txtId)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(PictureBox8)
@@ -241,14 +289,19 @@ Partial Class admin
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtId As TextBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBoxNombre As TextBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextApel As TextBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextTlf As TextBox
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextEmail As TextBox
     Friend WithEvents Panel6 As Panel
+    Friend WithEvents TextContra As TextBox
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents AgregarAdminToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BajaUnClienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnAcep As Button
 End Class
