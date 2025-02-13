@@ -175,5 +175,62 @@ Module Administrador
     End Sub
 
 
+    Public Sub CargarPeliculasEnListView(listView As ListView)
+        Dim query As String = "SELECT id_peli, titulo, director, año, genero, stock, sipnosis FROM Pelicula"
+        Dim dt As New DataTable()
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using da As New SQLiteDataAdapter(query, conn)
+                da.Fill(dt)
+            End Using
+        End Using
+
+        listView.Items.Clear()
+
+        For Each row As DataRow In dt.Rows
+            Dim item As New ListViewItem(row("id_peli").ToString()) ' Columna Id
+            item.SubItems.Add(row("titulo").ToString())
+            item.SubItems.Add(row("director").ToString())
+            item.SubItems.Add(row("año").ToString())
+            item.SubItems.Add(row("genero").ToString())
+            item.SubItems.Add(row("stock").ToString())
+            item.SubItems.Add(row("sipnosis").ToString())
+
+            listView.Items.Add(item)
+        Next
+    End Sub
+
+
+
+
+
+    Public Sub CargarAlquileresEnListView(listView As ListView)
+        Dim query As String = "SELECT A.id_alqui, A.dni, P.titulo, A.fecha_alquiler, A.fecha_devo, A.devuelto 
+                           FROM Alquiler A 
+                           JOIN Pelicula P ON A.id_pelicula = P.id_peli"
+
+        Dim dt As New DataTable()
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using da As New SQLiteDataAdapter(query, conn)
+                da.Fill(dt)
+            End Using
+        End Using
+
+        listView.Items.Clear()
+
+        For Each row As DataRow In dt.Rows
+            Dim item As New ListViewItem(row("id_alqui").ToString()) ' Columna Id_Alquiler
+            item.SubItems.Add(row("dni").ToString())
+            item.SubItems.Add(row("titulo").ToString()) ' Mostrar el título en lugar del id_pelicula
+            item.SubItems.Add(row("fecha_alquiler").ToString())
+            item.SubItems.Add(row("fecha_devo").ToString())
+            item.SubItems.Add(row("devuelto").ToString())
+
+            listView.Items.Add(item)
+        Next
+    End Sub
+
+
 
 End Module
