@@ -11,21 +11,27 @@
         Dim usuario As String = txtUsuario.Text
         Dim contrasena As String = txtPassword.Text
 
+
+        Dim nombreUsuario As String = VerificarCredenciales(usuario, contrasena, esAdmin)
+
         If esAdmin Then
-            If VerificarCredenciales(usuario, contrasena, True) Then
-                admin.Show()
+            If nombreUsuario <> "" Then
+                Dim adminForm As New admin()
+                adminForm.NombreUsuario = nombreUsuario
+                adminForm.Show()
                 Me.Hide()
             Else
                 MessageBox.Show("Credenciales de administrador incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
-            If VerificarCredenciales(usuario, contrasena, False) Then
+            If nombreUsuario <> "" Then
                 MessageBox.Show("¡Bienvenido Usuario!", "Acceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 MessageBox.Show("Credenciales incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End If
     End Sub
+
 
     Private Sub lbAdmin_Click(sender As Object, e As EventArgs) Handles lbAdmin.Click
         esAdmin = Not esAdmin

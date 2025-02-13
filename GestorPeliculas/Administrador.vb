@@ -24,7 +24,7 @@ Module Administrador
     End Function
 
 
-    Public Function AgregarPelicula(titulo As String, stock As Integer, director As String, año As Integer, genero As String, sipnosis As String) As Boolean
+    Public Function AgregarPelicula(titulo As String, stock As Integer, director As String, año As String, genero As String, sipnosis As String) As Boolean
         Try
             Using con As SQLiteConnection = ConexionBD.ObtenerConexion()
                 con.Open()
@@ -45,4 +45,73 @@ Module Administrador
             Return False
         End Try
     End Function
+
+
+
+    ' Método para obtener los datos del administrador por email utilizando DataSet
+    Public Function ObtenerDatosPorEmail(email As String, query As String) As DataSet
+        Dim ds As New DataSet()
+
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using da As New SQLiteDataAdapter(query, conn)
+                ' Definir el parámetro para evitar SQL injection
+                da.SelectCommand.Parameters.AddWithValue("@Email", email)
+
+                da.Fill(ds, "Datos")
+            End Using
+        End Using
+
+        Return ds
+    End Function
+
+    Public Function ObtenerTodosLosEmails(query As String) As DataTable
+
+        Dim dt As New DataTable()
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using da As New SQLiteDataAdapter(query, conn)
+                da.Fill(dt)
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+
+
+    Public Sub EliminarPorEmail(email As String, query As String)
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@Email", email)
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    Public Sub clear(Nombre As TextBox, Apellido As TextBox, Tlf As TextBox, Email As TextBox)
+        Nombre.Clear()
+        Apellido.Clear()
+        Tlf.Clear()
+        Email.Clear()
+    End Sub
+
+    Public Sub CargarEmailsEnComboBox(ComboBoxGmailAmin As ComboBox, Query As String)
+        Dim dt As DataTable = ObtenerTodosLosEmails(Query)
+
+        ComboBoxGmailAmin.Items.Clear()
+
+        For Each row As DataRow In dt.Rows
+            ComboBoxGmailAmin.Items.Add(row("email").ToString())
+        Next
+    End Sub
+
+    Public Sub ObtenerRows(Nom As TextBox, Apel As TextBox, Tlf As TextBox, Email As TextBox, ds As DataSet)
+        Nom.Text = ds.Tables("Datos").Rows(0)("nombre").ToString()
+        Apel.Text = ds.Tables("Datos").Rows(0)("apellidos").ToString()
+        Tlf.Text = ds.Tables("Datos").Rows(0)("telefono").ToString()
+        Email.Text = ds.Tables("Datos").Rows(0)("email").ToString()
+    End Sub
+
 End Module

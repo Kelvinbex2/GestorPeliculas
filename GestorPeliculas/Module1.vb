@@ -8,16 +8,16 @@ Module ConexionBD
         Return con
     End Function
 
-    Public Function VerificarCredenciales(emailOrId As String, contraseña As String, esAdmin As Boolean) As Boolean
+    Public Function VerificarCredenciales(emailOrId As String, contraseña As String, esAdmin As Boolean) As String
         Using conn As SQLiteConnection = ObtenerConexion()
             Try
                 conn.Open()
                 Dim query As String
 
                 If esAdmin Then
-                    query = "SELECT COUNT(*) FROM Admin WHERE id_admin = @id_admin AND contraseña = @contraseña"
+                    query = "SELECT nombre FROM Admin WHERE id_admin = @id_admin AND contraseña = @contraseña"
                 Else
-                    query = "SELECT COUNT(*) FROM Cliente WHERE email = @email AND contraseña = @contraseña"
+                    query = "SELECT nombre FROM Cliente WHERE email = @email AND contraseña = @contraseña"
                 End If
 
                 Using cmd As New SQLiteCommand(query, conn)
@@ -28,16 +28,22 @@ Module ConexionBD
                     End If
                     cmd.Parameters.AddWithValue("@contraseña", contraseña)
 
-                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    Dim result As Object = cmd.ExecuteScalar()
 
-                    Return count > 0
+                    ' Si el usuario existe, devuelve su nombre
+                    If result IsNot Nothing Then
+                        Return result.ToString()
+                    Else
+                        Return String.Empty ' Retorna vacío si no se encuentra el usuario
+                    End If
                 End Using
             Catch ex As Exception
-                Console.WriteLine("Error al verificar las credenciales: " & ex.Message)
-                Return False
+                MessageBox.Show("Error al verificar las credenciales: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return String.Empty
             End Try
         End Using
     End Function
+
 
     Public Function InsertarCliente(dni As String, nombre As String, apellidos As String, telefono As String, email As String, direccion As String, contraseña As String) As Boolean
         Using conn As SQLiteConnection = ObtenerConexion()

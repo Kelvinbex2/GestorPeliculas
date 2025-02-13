@@ -25,9 +25,9 @@ Partial Class admin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin))
         MenuStrip1 = New MenuStrip()
         MenuToolStripMenuItem = New ToolStripMenuItem()
+        CerrarSessionToolStripMenuItem = New ToolStripMenuItem()
         AgregarAdminToolStripMenuItem = New ToolStripMenuItem()
         AgregarPeliculaToolStripMenuItem = New ToolStripMenuItem()
-        TextBox1 = New TextBox()
         Panel9 = New Panel()
         btnAcep = New Button()
         TextContra = New TextBox()
@@ -42,35 +42,39 @@ Partial Class admin
         Panel3 = New Panel()
         PictureBox8 = New PictureBox()
         Panel10 = New Panel()
+        txtFec = New TextBox()
+        PictureBox7 = New PictureBox()
+        PictureBox6 = New PictureBox()
+        PictureBox5 = New PictureBox()
+        PictureBox4 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
         btnagregar = New Button()
         txtSip = New TextBox()
         txtCal = New TextBox()
         txtDir = New TextBox()
         txtTit = New TextBox()
-        txtFec = New TextBox()
         txtGen = New TextBox()
         PictureBox1 = New PictureBox()
         Panel7 = New Panel()
         TextBox6 = New TextBox()
         Panel1 = New Panel()
-        PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
-        PictureBox4 = New PictureBox()
-        PictureBox5 = New PictureBox()
-        PictureBox6 = New PictureBox()
-        PictureBox7 = New PictureBox()
+        lblMsg = New Label()
+        lbluser = New Label()
+        ConsultarToolStripMenuItem = New ToolStripMenuItem()
+        OperacionesToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         Panel9.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         Panel10.SuspendLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' MenuStrip1
@@ -84,9 +88,16 @@ Partial Class admin
         ' 
         ' MenuToolStripMenuItem
         ' 
+        MenuToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CerrarSessionToolStripMenuItem, ConsultarToolStripMenuItem, OperacionesToolStripMenuItem})
         MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         MenuToolStripMenuItem.Size = New Size(50, 20)
         MenuToolStripMenuItem.Text = "Menu"
+        ' 
+        ' CerrarSessionToolStripMenuItem
+        ' 
+        CerrarSessionToolStripMenuItem.Name = "CerrarSessionToolStripMenuItem"
+        CerrarSessionToolStripMenuItem.Size = New Size(180, 22)
+        CerrarSessionToolStripMenuItem.Text = "Cerrar session"
         ' 
         ' AgregarAdminToolStripMenuItem
         ' 
@@ -99,17 +110,6 @@ Partial Class admin
         AgregarPeliculaToolStripMenuItem.Name = "AgregarPeliculaToolStripMenuItem"
         AgregarPeliculaToolStripMenuItem.Size = New Size(105, 20)
         AgregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.BackColor = SystemColors.Control
-        TextBox1.Enabled = False
-        TextBox1.Font = New Font("Segoe UI", 30F, FontStyle.Bold Or FontStyle.Italic)
-        TextBox1.Location = New Point(279, 37)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(239, 61)
-        TextBox1.TabIndex = 20
-        TextBox1.Text = "Bienvenido"
         ' 
         ' Panel9
         ' 
@@ -132,16 +132,21 @@ Partial Class admin
         ' 
         ' btnAcep
         ' 
+        btnAcep.BackColor = SystemColors.Window
+        btnAcep.FlatAppearance.BorderColor = Color.FromArgb(CByte(227), CByte(234), CByte(240))
+        btnAcep.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        btnAcep.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(227), CByte(234), CByte(240))
+        btnAcep.FlatStyle = FlatStyle.Popup
         btnAcep.Location = New Point(126, 430)
         btnAcep.Name = "btnAcep"
         btnAcep.Size = New Size(75, 23)
         btnAcep.TabIndex = 48
         btnAcep.Text = "Aceptar"
-        btnAcep.UseVisualStyleBackColor = True
+        btnAcep.UseVisualStyleBackColor = False
         ' 
         ' TextContra
         ' 
-        TextContra.BackColor = SystemColors.Control
+        TextContra.BackColor = SystemColors.Window
         TextContra.BorderStyle = BorderStyle.None
         TextContra.Location = New Point(72, 384)
         TextContra.Multiline = True
@@ -160,7 +165,7 @@ Partial Class admin
         ' 
         ' TextEmail
         ' 
-        TextEmail.BackColor = SystemColors.Control
+        TextEmail.BackColor = SystemColors.Window
         TextEmail.BorderStyle = BorderStyle.None
         TextEmail.Location = New Point(72, 342)
         TextEmail.Multiline = True
@@ -179,7 +184,7 @@ Partial Class admin
         ' 
         ' TextTlf
         ' 
-        TextTlf.BackColor = SystemColors.Control
+        TextTlf.BackColor = SystemColors.Window
         TextTlf.BorderStyle = BorderStyle.None
         TextTlf.Location = New Point(72, 301)
         TextTlf.Multiline = True
@@ -198,7 +203,7 @@ Partial Class admin
         ' 
         ' TextApel
         ' 
-        TextApel.BackColor = SystemColors.Control
+        TextApel.BackColor = SystemColors.Window
         TextApel.BorderStyle = BorderStyle.None
         TextApel.Location = New Point(72, 257)
         TextApel.Multiline = True
@@ -217,7 +222,7 @@ Partial Class admin
         ' 
         ' TextBoxNombre
         ' 
-        TextBoxNombre.BackColor = SystemColors.Control
+        TextBoxNombre.BackColor = SystemColors.Window
         TextBoxNombre.BorderStyle = BorderStyle.None
         TextBoxNombre.Location = New Point(72, 213)
         TextBoxNombre.Multiline = True
@@ -237,7 +242,7 @@ Partial Class admin
         ' PictureBox8
         ' 
         PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(108, 59)
+        PictureBox8.Location = New Point(120, 58)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(107, 110)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
@@ -246,6 +251,7 @@ Partial Class admin
         ' 
         ' Panel10
         ' 
+        Panel10.Controls.Add(txtFec)
         Panel10.Controls.Add(PictureBox7)
         Panel10.Controls.Add(PictureBox6)
         Panel10.Controls.Add(PictureBox5)
@@ -257,26 +263,104 @@ Partial Class admin
         Panel10.Controls.Add(txtCal)
         Panel10.Controls.Add(txtDir)
         Panel10.Controls.Add(txtTit)
-        Panel10.Controls.Add(txtFec)
         Panel10.Controls.Add(txtGen)
         Panel10.Controls.Add(PictureBox1)
-        Panel10.Location = New Point(383, 100)
+        Panel10.Location = New Point(448, 100)
         Panel10.Name = "Panel10"
-        Panel10.Size = New Size(417, 483)
+        Panel10.Size = New Size(358, 483)
         Panel10.TabIndex = 45
+        ' 
+        ' txtFec
+        ' 
+        txtFec.Location = New Point(80, 321)
+        txtFec.Name = "txtFec"
+        txtFec.PlaceholderText = "Fecha"
+        txtFec.Size = New Size(221, 23)
+        txtFec.TabIndex = 59
+        ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.BackColor = SystemColors.Window
+        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
+        PictureBox7.Location = New Point(54, 399)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(20, 23)
+        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox7.TabIndex = 58
+        PictureBox7.TabStop = False
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.BackColor = SystemColors.Window
+        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
+        PictureBox6.Location = New Point(54, 363)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(20, 23)
+        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox6.TabIndex = 57
+        PictureBox6.TabStop = False
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackColor = SystemColors.Window
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(54, 321)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(20, 23)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox5.TabIndex = 56
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = SystemColors.Window
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(54, 279)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(20, 23)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 55
+        PictureBox4.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = SystemColors.Window
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(54, 235)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(20, 23)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 54
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackColor = SystemColors.Window
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(54, 194)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(20, 23)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 53
+        PictureBox2.TabStop = False
         ' 
         ' btnagregar
         ' 
-        btnagregar.Location = New Point(144, 441)
+        btnagregar.BackColor = SystemColors.Window
+        btnagregar.FlatAppearance.BorderColor = Color.FromArgb(CByte(227), CByte(234), CByte(240))
+        btnagregar.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        btnagregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(227), CByte(234), CByte(240))
+        btnagregar.FlatStyle = FlatStyle.Popup
+        btnagregar.Location = New Point(149, 435)
         btnagregar.Name = "btnagregar"
         btnagregar.Size = New Size(75, 23)
         btnagregar.TabIndex = 52
         btnagregar.Text = "Agregar"
-        btnagregar.UseVisualStyleBackColor = True
+        btnagregar.UseVisualStyleBackColor = False
         ' 
         ' txtSip
         ' 
-        txtSip.Location = New Point(68, 407)
+        txtSip.Location = New Point(80, 399)
         txtSip.Name = "txtSip"
         txtSip.PlaceholderText = "Sipnosis"
         txtSip.Size = New Size(221, 23)
@@ -284,7 +368,7 @@ Partial Class admin
         ' 
         ' txtCal
         ' 
-        txtCal.Location = New Point(68, 246)
+        txtCal.Location = New Point(80, 238)
         txtCal.Name = "txtCal"
         txtCal.PlaceholderText = "stock"
         txtCal.Size = New Size(221, 23)
@@ -292,7 +376,7 @@ Partial Class admin
         ' 
         ' txtDir
         ' 
-        txtDir.Location = New Point(68, 287)
+        txtDir.Location = New Point(80, 279)
         txtDir.Name = "txtDir"
         txtDir.PlaceholderText = "Director"
         txtDir.Size = New Size(221, 23)
@@ -300,23 +384,15 @@ Partial Class admin
         ' 
         ' txtTit
         ' 
-        txtTit.Location = New Point(68, 202)
+        txtTit.Location = New Point(80, 194)
         txtTit.Name = "txtTit"
         txtTit.PlaceholderText = "Titulo"
         txtTit.Size = New Size(221, 23)
         txtTit.TabIndex = 47
         ' 
-        ' txtFec
-        ' 
-        txtFec.Location = New Point(68, 329)
-        txtFec.Name = "txtFec"
-        txtFec.PlaceholderText = "Año"
-        txtFec.Size = New Size(221, 23)
-        txtFec.TabIndex = 48
-        ' 
         ' txtGen
         ' 
-        txtGen.Location = New Point(68, 371)
+        txtGen.Location = New Point(80, 363)
         txtGen.Name = "txtGen"
         txtGen.PlaceholderText = "Genero"
         txtGen.Size = New Size(221, 23)
@@ -325,7 +401,7 @@ Partial Class admin
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(128, 59)
+        PictureBox1.Location = New Point(137, 58)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(107, 110)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -356,87 +432,55 @@ Partial Class admin
         Panel1.BackColor = SystemColors.ActiveCaptionText
         Panel1.Controls.Add(TextBox6)
         Panel1.Controls.Add(Panel7)
-        Panel1.Location = New Point(376, 100)
+        Panel1.ForeColor = SystemColors.ActiveCaptionText
+        Panel1.Location = New Point(414, 100)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1, 482)
+        Panel1.Size = New Size(1, 483)
         Panel1.TabIndex = 21
         ' 
-        ' PictureBox2
+        ' lblMsg
         ' 
-        PictureBox2.BackColor = Color.GhostWhite
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(42, 202)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(20, 23)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 53
-        PictureBox2.TabStop = False
+        lblMsg.Font = New Font("Segoe UI", 14F, FontStyle.Bold Or FontStyle.Italic)
+        lblMsg.Location = New Point(363, 35)
+        lblMsg.Name = "lblMsg"
+        lblMsg.Size = New Size(112, 23)
+        lblMsg.TabIndex = 46
+        lblMsg.Text = "Bienvenido"
+        lblMsg.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' PictureBox3
+        ' lbluser
         ' 
-        PictureBox3.BackColor = Color.GhostWhite
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(42, 243)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(20, 23)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 54
-        PictureBox3.TabStop = False
+        lbluser.Font = New Font("Segoe UI", 14F, FontStyle.Bold Or FontStyle.Italic)
+        lbluser.Location = New Point(18, 69)
+        lbluser.Name = "lbluser"
+        lbluser.Size = New Size(794, 23)
+        lbluser.TabIndex = 47
+        lbluser.Text = "user"
+        lbluser.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' PictureBox4
+        ' ConsultarToolStripMenuItem
         ' 
-        PictureBox4.BackColor = Color.GhostWhite
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(42, 287)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(20, 23)
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.TabIndex = 55
-        PictureBox4.TabStop = False
+        ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        ConsultarToolStripMenuItem.Size = New Size(180, 22)
+        ConsultarToolStripMenuItem.Text = "Consultar Peliculas"
         ' 
-        ' PictureBox5
+        ' OperacionesToolStripMenuItem
         ' 
-        PictureBox5.BackColor = Color.GhostWhite
-        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(42, 329)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(20, 23)
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.TabIndex = 56
-        PictureBox5.TabStop = False
-        ' 
-        ' PictureBox6
-        ' 
-        PictureBox6.BackColor = Color.GhostWhite
-        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(42, 371)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(20, 23)
-        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox6.TabIndex = 57
-        PictureBox6.TabStop = False
-        ' 
-        ' PictureBox7
-        ' 
-        PictureBox7.BackColor = Color.GhostWhite
-        PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(42, 407)
-        PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(20, 23)
-        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox7.TabIndex = 58
-        PictureBox7.TabStop = False
+        OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
+        OperacionesToolStripMenuItem.Size = New Size(180, 22)
+        OperacionesToolStripMenuItem.Text = "Eliminar "
         ' 
         ' admin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.Control
-        ClientSize = New Size(812, 627)
+        BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(240))
+        ClientSize = New Size(812, 664)
+        Controls.Add(lbluser)
+        Controls.Add(lblMsg)
         Controls.Add(Panel10)
         Controls.Add(Panel9)
         Controls.Add(Panel1)
-        Controls.Add(TextBox1)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "admin"
@@ -448,21 +492,20 @@ Partial Class admin
         CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         Panel10.ResumeLayout(False)
         Panel10.PerformLayout()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MenuToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents AgregarAdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarPeliculaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel9 As Panel
@@ -484,7 +527,6 @@ Partial Class admin
     Friend WithEvents txtCal As TextBox
     Friend WithEvents txtDir As TextBox
     Friend WithEvents txtTit As TextBox
-    Friend WithEvents txtFec As TextBox
     Friend WithEvents txtGen As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -496,4 +538,10 @@ Partial Class admin
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents lblMsg As Label
+    Friend WithEvents lbluser As Label
+    Friend WithEvents txtFec As TextBox
+    Friend WithEvents CerrarSessionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OperacionesToolStripMenuItem As ToolStripMenuItem
 End Class

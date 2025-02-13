@@ -1,8 +1,19 @@
 ﻿Public Class admin
+    Public Property NombreUsuario As String
+
     Private Sub admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Panel10.Visible = False
         Panel9.Visible = True
+
+
+        If Not String.IsNullOrEmpty(NombreUsuario) Then
+            lblMsg.Text = "Bienvenido "
+            lbluser.Text = NombreUsuario
+        Else
+            lblMsg.Text = "Bienvenido"
+        End If
     End Sub
+
 
     Private Sub AgregarPeliculaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPeliculaToolStripMenuItem.Click
         Panel9.Visible = False
@@ -39,7 +50,7 @@
         Dim titulo As String = txtTit.Text
         Dim stock As Integer
         Dim director As String = txtDir.Text
-        Dim año As Integer
+        Dim año As String = txtFec.Text
         Dim genero As String = txtGen.Text
         Dim sipnosis As String = txtSip.Text
 
@@ -54,10 +65,7 @@
             Return
         End If
 
-        If Not Integer.TryParse(txtFec.Text, año) Then
-            MessageBox.Show("Año debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
-        End If
+
 
         If AgregarPelicula(titulo, stock, director, año, genero, sipnosis) Then
             MessageBox.Show("Película agregada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -83,5 +91,13 @@
         TextContra.Clear()
     End Sub
 
+    Private Sub CerrarSessionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSessionToolStripMenuItem.Click
+        Login.Show()
+        Me.Hide()
+    End Sub
 
+    Private Sub OperacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OperacionesToolStripMenuItem.Click
+        Eliminar.Show()
+        Me.Hide()
+    End Sub
 End Class
