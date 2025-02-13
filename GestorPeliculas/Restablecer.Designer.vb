@@ -121,14 +121,13 @@ Partial Class Restablecer
         ' 
         ' btmAtras
         ' 
-        btmAtras.BackColor = Color.Thistle
+        btmAtras.BackColor = SystemColors.Control
         btmAtras.BackgroundImage = CType(resources.GetObject("btmAtras.BackgroundImage"), Image)
         btmAtras.BackgroundImageLayout = ImageLayout.Stretch
-        btmAtras.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btmAtras.FlatAppearance.BorderSize = 0
-        btmAtras.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
-        btmAtras.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
-        btmAtras.FlatStyle = FlatStyle.Popup
+        btmAtras.FlatAppearance.MouseDownBackColor = Color.Thistle
+        btmAtras.FlatAppearance.MouseOverBackColor = Color.Thistle
+        btmAtras.FlatStyle = FlatStyle.Flat
         btmAtras.Location = New Point(12, 398)
         btmAtras.Name = "btmAtras"
         btmAtras.Size = New Size(40, 40)

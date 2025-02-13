@@ -114,4 +114,66 @@ Module Administrador
         Email.Text = ds.Tables("Datos").Rows(0)("email").ToString()
     End Sub
 
+    Public Sub obternerRow(direc As TextBox, genero As TextBox, fecha As TextBox, sip As TextBox, ds As DataSet)
+        direc.Text = ds.Tables("Pelicula").Rows(0)("director").ToString()
+        genero.Text = ds.Tables("Pelicula").Rows(0)("genero").ToString()
+        fecha.Text = ds.Tables("Pelicula").Rows(0)("año").ToString()
+        sip.Text = ds.Tables("Pelicula").Rows(0)("sipnosis").ToString()
+    End Sub
+
+
+    Public Sub CargarTitulosPeliculasEnComboBox(combo As ComboBox)
+        Dim query As String = "SELECT titulo FROM Pelicula"
+        Dim dt As New DataTable()
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using da As New SQLiteDataAdapter(query, conn)
+                da.Fill(dt)
+            End Using
+        End Using
+
+        ' Limpiar y agregar los títulos al ComboBox
+        combo.Items.Clear()
+        For Each row As DataRow In dt.Rows
+            combo.Items.Add(row("titulo").ToString())
+        Next
+    End Sub
+
+
+
+    Public Function ObtenerPeliculaPorTitulo(titulo As String) As DataSet
+        Dim query As String = "SELECT director, genero, año, sipnosis, stock FROM Pelicula WHERE titulo = @Titulo"
+        Dim ds As New DataSet()
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using da As New SQLiteDataAdapter(query, conn)
+                da.SelectCommand.Parameters.AddWithValue("@Titulo", titulo)
+                da.Fill(ds, "Pelicula")
+            End Using
+        End Using
+
+        Return ds
+    End Function
+
+
+    Public Sub DisminuirStockPorTitulo(titulo As String, cantidadReducir As Integer)
+        Dim query As String = "UPDATE Pelicula SET stock = stock - @Cantidad WHERE titulo = @Titulo AND stock >= @Cantidad"
+
+        Using conn As SQLiteConnection = ObtenerConexion()
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@Titulo", titulo)
+                cmd.Parameters.AddWithValue("@Cantidad", cantidadReducir)
+                conn.Open()
+
+                Dim filasAfectadas As Integer = cmd.ExecuteNonQuery()
+
+                If filasAfectadas = 0 Then
+                    MessageBox.Show("No se puede disminuir más el stock. La película no tiene suficientes copias disponibles.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            End Using
+        End Using
+    End Sub
+
+
+
 End Module

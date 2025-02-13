@@ -100,4 +100,9 @@
         Eliminar.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        Consultar.Show()
+        Me.Hide()
+    End Sub
 End Class

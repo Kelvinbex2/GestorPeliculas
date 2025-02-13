@@ -65,10 +65,11 @@ Partial Class Eliminar
         Panel16 = New Panel()
         Panel17 = New Panel()
         MenuStrip1 = New MenuStrip()
-        EliminarToolStripMenuItem = New ToolStripMenuItem()
-        AdministradorToolStripMenuItem = New ToolStripMenuItem()
-        UsuarioToolStripMenuItem = New ToolStripMenuItem()
-        PeliculaToolStripMenuItem = New ToolStripMenuItem()
+        AdministradorToolStripMenuItem1 = New ToolStripMenuItem()
+        UsuarioToolStripMenuItem1 = New ToolStripMenuItem()
+        PeliculaToolStripMenuItem1 = New ToolStripMenuItem()
+        btmAtras = New Button()
+        txtStock = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -80,6 +81,7 @@ Partial Class Eliminar
         ' 
         ' Panel1
         ' 
+        Panel1.BorderStyle = BorderStyle.Fixed3D
         Panel1.Controls.Add(btnAcpAdmin)
         Panel1.Controls.Add(TextEmail)
         Panel1.Controls.Add(Panel6)
@@ -99,16 +101,22 @@ Partial Class Eliminar
         ' 
         ' btnAcpAdmin
         ' 
+        btnAcpAdmin.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
+        btnAcpAdmin.FlatAppearance.BorderSize = 0
+        btnAcpAdmin.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btnAcpAdmin.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btnAcpAdmin.FlatStyle = FlatStyle.Flat
+        btnAcpAdmin.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnAcpAdmin.Location = New Point(70, 343)
         btnAcpAdmin.Name = "btnAcpAdmin"
         btnAcpAdmin.Size = New Size(75, 23)
         btnAcpAdmin.TabIndex = 56
         btnAcpAdmin.Text = "Aceptar"
-        btnAcpAdmin.UseVisualStyleBackColor = True
+        btnAcpAdmin.UseVisualStyleBackColor = False
         ' 
         ' TextEmail
         ' 
-        TextEmail.BackColor = SystemColors.Window
+        TextEmail.BackColor = Color.WhiteSmoke
         TextEmail.BorderStyle = BorderStyle.None
         TextEmail.Enabled = False
         TextEmail.Location = New Point(15, 303)
@@ -128,7 +136,7 @@ Partial Class Eliminar
         ' 
         ' TextTlf
         ' 
-        TextTlf.BackColor = SystemColors.Window
+        TextTlf.BackColor = Color.WhiteSmoke
         TextTlf.BorderStyle = BorderStyle.None
         TextTlf.Enabled = False
         TextTlf.Location = New Point(15, 262)
@@ -148,8 +156,7 @@ Partial Class Eliminar
         ' 
         ' TextApel
         ' 
-        TextApel.BackColor = SystemColors.Window
-        TextApel.BorderStyle = BorderStyle.None
+        TextApel.BackColor = Color.WhiteSmoke
         TextApel.Enabled = False
         TextApel.Location = New Point(15, 218)
         TextApel.Multiline = True
@@ -168,7 +175,7 @@ Partial Class Eliminar
         ' 
         ' TextBoxNombre
         ' 
-        TextBoxNombre.BackColor = SystemColors.Window
+        TextBoxNombre.BackColor = Color.WhiteSmoke
         TextBoxNombre.BorderStyle = BorderStyle.None
         TextBoxNombre.Enabled = False
         TextBoxNombre.Location = New Point(15, 174)
@@ -189,6 +196,7 @@ Partial Class Eliminar
         ' lbAdmin
         ' 
         lbAdmin.AutoSize = True
+        lbAdmin.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         lbAdmin.Location = New Point(92, 72)
         lbAdmin.Name = "lbAdmin"
         lbAdmin.Size = New Size(43, 15)
@@ -197,6 +205,7 @@ Partial Class Eliminar
         ' 
         ' ComboBoxGmailAmin
         ' 
+        ComboBoxGmailAmin.BackColor = Color.WhiteSmoke
         ComboBoxGmailAmin.FormattingEnabled = True
         ComboBoxGmailAmin.Location = New Point(15, 126)
         ComboBoxGmailAmin.Name = "ComboBoxGmailAmin"
@@ -205,6 +214,7 @@ Partial Class Eliminar
         ' 
         ' PictureBox8
         ' 
+        PictureBox8.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
         PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
         PictureBox8.Location = New Point(3, 3)
         PictureBox8.Name = "PictureBox8"
@@ -215,6 +225,7 @@ Partial Class Eliminar
         ' 
         ' Panel2
         ' 
+        Panel2.BorderStyle = BorderStyle.Fixed3D
         Panel2.Controls.Add(btnAcpUser)
         Panel2.Controls.Add(txtEmailUser)
         Panel2.Controls.Add(Label3)
@@ -234,16 +245,23 @@ Partial Class Eliminar
         ' 
         ' btnAcpUser
         ' 
+        btnAcpUser.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
+        btnAcpUser.FlatAppearance.BorderSize = 0
+        btnAcpUser.FlatAppearance.CheckedBackColor = Color.Thistle
+        btnAcpUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btnAcpUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btnAcpUser.FlatStyle = FlatStyle.Flat
+        btnAcpUser.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnAcpUser.Location = New Point(73, 343)
         btnAcpUser.Name = "btnAcpUser"
         btnAcpUser.Size = New Size(75, 23)
         btnAcpUser.TabIndex = 64
         btnAcpUser.Text = "Aceptar"
-        btnAcpUser.UseVisualStyleBackColor = True
+        btnAcpUser.UseVisualStyleBackColor = False
         ' 
         ' txtEmailUser
         ' 
-        txtEmailUser.BackColor = SystemColors.Window
+        txtEmailUser.BackColor = Color.WhiteSmoke
         txtEmailUser.BorderStyle = BorderStyle.None
         txtEmailUser.Enabled = False
         txtEmailUser.Location = New Point(19, 305)
@@ -256,9 +274,10 @@ Partial Class Eliminar
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label3.Location = New Point(92, 72)
         Label3.Name = "Label3"
-        Label3.Size = New Size(47, 15)
+        Label3.Size = New Size(49, 15)
         Label3.TabIndex = 39
         Label3.Text = "Usuario"
         ' 
@@ -272,6 +291,7 @@ Partial Class Eliminar
         ' 
         ' ComboboxGmailDni
         ' 
+        ComboboxGmailDni.BackColor = Color.WhiteSmoke
         ComboboxGmailDni.FormattingEnabled = True
         ComboboxGmailDni.Location = New Point(19, 126)
         ComboboxGmailDni.Name = "ComboboxGmailDni"
@@ -280,7 +300,7 @@ Partial Class Eliminar
         ' 
         ' txtTlfUser
         ' 
-        txtTlfUser.BackColor = SystemColors.Window
+        txtTlfUser.BackColor = Color.WhiteSmoke
         txtTlfUser.BorderStyle = BorderStyle.None
         txtTlfUser.Enabled = False
         txtTlfUser.Location = New Point(19, 264)
@@ -292,6 +312,7 @@ Partial Class Eliminar
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.Location = New Point(3, 3)
         PictureBox1.Name = "PictureBox1"
@@ -310,7 +331,7 @@ Partial Class Eliminar
         ' 
         ' txtNomUser
         ' 
-        txtNomUser.BackColor = SystemColors.Window
+        txtNomUser.BackColor = Color.WhiteSmoke
         txtNomUser.BorderStyle = BorderStyle.None
         txtNomUser.Enabled = False
         txtNomUser.Location = New Point(19, 176)
@@ -322,7 +343,7 @@ Partial Class Eliminar
         ' 
         ' txtApelUser
         ' 
-        txtApelUser.BackColor = SystemColors.Window
+        txtApelUser.BackColor = Color.WhiteSmoke
         txtApelUser.BorderStyle = BorderStyle.None
         txtApelUser.Enabled = False
         txtApelUser.Location = New Point(19, 220)
@@ -350,6 +371,8 @@ Partial Class Eliminar
         ' 
         ' Panel3
         ' 
+        Panel3.BorderStyle = BorderStyle.Fixed3D
+        Panel3.Controls.Add(txtStock)
         Panel3.Controls.Add(btnAcpPeli)
         Panel3.Controls.Add(txtSip)
         Panel3.Controls.Add(Label5)
@@ -369,16 +392,23 @@ Partial Class Eliminar
         ' 
         ' btnAcpPeli
         ' 
+        btnAcpPeli.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
+        btnAcpPeli.FlatAppearance.BorderSize = 0
+        btnAcpPeli.FlatAppearance.CheckedBackColor = Color.Thistle
+        btnAcpPeli.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btnAcpPeli.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btnAcpPeli.FlatStyle = FlatStyle.Flat
+        btnAcpPeli.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnAcpPeli.Location = New Point(81, 343)
         btnAcpPeli.Name = "btnAcpPeli"
         btnAcpPeli.Size = New Size(75, 23)
         btnAcpPeli.TabIndex = 65
         btnAcpPeli.Text = "Aceptar"
-        btnAcpPeli.UseVisualStyleBackColor = True
+        btnAcpPeli.UseVisualStyleBackColor = False
         ' 
         ' txtSip
         ' 
-        txtSip.BackColor = SystemColors.Window
+        txtSip.BackColor = Color.WhiteSmoke
         txtSip.BorderStyle = BorderStyle.None
         txtSip.Enabled = False
         txtSip.Location = New Point(12, 303)
@@ -391,11 +421,12 @@ Partial Class Eliminar
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label5.Location = New Point(92, 72)
         Label5.Name = "Label5"
-        Label5.Size = New Size(53, 15)
+        Label5.Size = New Size(106, 15)
         Label5.TabIndex = 39
-        Label5.Text = "Peliculas"
+        Label5.Text = "Stock de Peliculas"
         ' 
         ' Panel12
         ' 
@@ -407,6 +438,7 @@ Partial Class Eliminar
         ' 
         ' ComboTitulo
         ' 
+        ComboTitulo.BackColor = Color.WhiteSmoke
         ComboTitulo.FormattingEnabled = True
         ComboTitulo.Location = New Point(12, 126)
         ComboTitulo.Name = "ComboTitulo"
@@ -415,7 +447,7 @@ Partial Class Eliminar
         ' 
         ' txtFecha
         ' 
-        txtFecha.BackColor = SystemColors.Window
+        txtFecha.BackColor = Color.WhiteSmoke
         txtFecha.BorderStyle = BorderStyle.None
         txtFecha.Enabled = False
         txtFecha.Location = New Point(12, 262)
@@ -427,6 +459,7 @@ Partial Class Eliminar
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
         PictureBox2.Location = New Point(3, 3)
         PictureBox2.Name = "PictureBox2"
@@ -445,7 +478,7 @@ Partial Class Eliminar
         ' 
         ' txtDirec
         ' 
-        txtDirec.BackColor = SystemColors.Window
+        txtDirec.BackColor = Color.WhiteSmoke
         txtDirec.BorderStyle = BorderStyle.None
         txtDirec.Enabled = False
         txtDirec.Location = New Point(12, 174)
@@ -465,7 +498,7 @@ Partial Class Eliminar
         ' 
         ' txtGenero
         ' 
-        txtGenero.BackColor = SystemColors.Window
+        txtGenero.BackColor = Color.WhiteSmoke
         txtGenero.BorderStyle = BorderStyle.None
         txtGenero.Enabled = False
         txtGenero.Location = New Point(12, 218)
@@ -486,6 +519,7 @@ Partial Class Eliminar
         ' Panel16
         ' 
         Panel16.BackColor = SystemColors.ActiveCaptionText
+        Panel16.BorderStyle = BorderStyle.Fixed3D
         Panel16.Location = New Point(256, 76)
         Panel16.Name = "Panel16"
         Panel16.Size = New Size(1, 426)
@@ -494,6 +528,7 @@ Partial Class Eliminar
         ' Panel17
         ' 
         Panel17.BackColor = SystemColors.ActiveCaptionText
+        Panel17.BorderStyle = BorderStyle.Fixed3D
         Panel17.Location = New Point(523, 76)
         Panel17.Name = "Panel17"
         Panel17.Size = New Size(1, 426)
@@ -501,43 +536,64 @@ Partial Class Eliminar
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {EliminarToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AdministradorToolStripMenuItem1, UsuarioToolStripMenuItem1, PeliculaToolStripMenuItem1})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(792, 24)
         MenuStrip1.TabIndex = 44
         MenuStrip1.Text = "MenuStrip1"
         ' 
-        ' EliminarToolStripMenuItem
+        ' AdministradorToolStripMenuItem1
         ' 
-        EliminarToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AdministradorToolStripMenuItem, UsuarioToolStripMenuItem, PeliculaToolStripMenuItem})
-        EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        EliminarToolStripMenuItem.Size = New Size(62, 20)
-        EliminarToolStripMenuItem.Text = "Eliminar"
+        AdministradorToolStripMenuItem1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        AdministradorToolStripMenuItem1.Name = "AdministradorToolStripMenuItem1"
+        AdministradorToolStripMenuItem1.Size = New Size(98, 20)
+        AdministradorToolStripMenuItem1.Text = "Administrador"
         ' 
-        ' AdministradorToolStripMenuItem
+        ' UsuarioToolStripMenuItem1
         ' 
-        AdministradorToolStripMenuItem.Name = "AdministradorToolStripMenuItem"
-        AdministradorToolStripMenuItem.Size = New Size(150, 22)
-        AdministradorToolStripMenuItem.Text = "Administrador"
+        UsuarioToolStripMenuItem1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
+        UsuarioToolStripMenuItem1.Size = New Size(61, 20)
+        UsuarioToolStripMenuItem1.Text = "Usuario"
         ' 
-        ' UsuarioToolStripMenuItem
+        ' PeliculaToolStripMenuItem1
         ' 
-        UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        UsuarioToolStripMenuItem.Size = New Size(150, 22)
-        UsuarioToolStripMenuItem.Text = "Usuario"
+        PeliculaToolStripMenuItem1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        PeliculaToolStripMenuItem1.Name = "PeliculaToolStripMenuItem1"
+        PeliculaToolStripMenuItem1.Size = New Size(61, 20)
+        PeliculaToolStripMenuItem1.Text = "Pelicula"
         ' 
-        ' PeliculaToolStripMenuItem
+        ' btmAtras
         ' 
-        PeliculaToolStripMenuItem.Name = "PeliculaToolStripMenuItem"
-        PeliculaToolStripMenuItem.Size = New Size(150, 22)
-        PeliculaToolStripMenuItem.Text = "Pelicula"
+        btmAtras.BackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btmAtras.BackgroundImage = CType(resources.GetObject("btmAtras.BackgroundImage"), Image)
+        btmAtras.BackgroundImageLayout = ImageLayout.Stretch
+        btmAtras.FlatAppearance.BorderSize = 0
+        btmAtras.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btmAtras.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
+        btmAtras.FlatStyle = FlatStyle.Flat
+        btmAtras.Location = New Point(15, 508)
+        btmAtras.Name = "btmAtras"
+        btmAtras.Size = New Size(39, 40)
+        btmAtras.TabIndex = 45
+        btmAtras.UseVisualStyleBackColor = False
+        ' 
+        ' txtStock
+        ' 
+        txtStock.Location = New Point(175, 97)
+        txtStock.Name = "txtStock"
+        txtStock.PlaceholderText = "Stock"
+        txtStock.Size = New Size(45, 23)
+        txtStock.TabIndex = 72
         ' 
         ' Eliminar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         ClientSize = New Size(792, 560)
+        Controls.Add(btmAtras)
         Controls.Add(Panel17)
         Controls.Add(Panel16)
         Controls.Add(Panel3)
@@ -546,7 +602,7 @@ Partial Class Eliminar
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Eliminar"
-        Text = "Eliminar"
+        Text = "+"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
@@ -604,8 +660,9 @@ Partial Class Eliminar
     Friend WithEvents Panel16 As Panel
     Friend WithEvents Panel17 As Panel
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AdministradorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PeliculaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdministradorToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents PeliculaToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents btmAtras As Button
+    Friend WithEvents txtStock As TextBox
 End Class

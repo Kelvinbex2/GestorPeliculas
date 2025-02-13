@@ -71,10 +71,10 @@ Partial Class Login
         ' btnRestablecer
         ' 
         btnRestablecer.FlatAppearance.BorderSize = 0
-        btnRestablecer.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(192))
-        btnRestablecer.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(192), CByte(0), CByte(192))
+        btnRestablecer.FlatAppearance.MouseDownBackColor = Color.Thistle
+        btnRestablecer.FlatAppearance.MouseOverBackColor = Color.Thistle
         btnRestablecer.FlatStyle = FlatStyle.Flat
-        btnRestablecer.Font = New Font("Segoe UI", 8F)
+        btnRestablecer.Font = New Font("Segoe UI", 8.0F)
         btnRestablecer.ForeColor = Color.DarkMagenta
         btnRestablecer.Location = New Point(211, 320)
         btnRestablecer.Name = "btnRestablecer"
@@ -85,7 +85,7 @@ Partial Class Login
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.BackColor = Color.AliceBlue
+        PictureBox2.BackColor = Color.Lavender
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
         PictureBox2.Location = New Point(171, 233)
         PictureBox2.Name = "PictureBox2"
@@ -96,7 +96,7 @@ Partial Class Login
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.BackColor = Color.AliceBlue
+        PictureBox3.BackColor = Color.Lavender
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
         PictureBox3.Location = New Point(171, 276)
         PictureBox3.Name = "PictureBox3"
@@ -107,23 +107,29 @@ Partial Class Login
         ' 
         ' btnIniciar
         ' 
-        btnIniciar.BackColor = Color.AliceBlue
-        btnIniciar.Font = New Font("Segoe UI", 14F)
+        btnIniciar.BackColor = Color.FromArgb(CByte(230), CByte(233), CByte(242))
+        btnIniciar.FlatAppearance.BorderSize = 0
+        btnIniciar.FlatAppearance.MouseDownBackColor = Color.Thistle
+        btnIniciar.FlatAppearance.MouseOverBackColor = Color.Thistle
+        btnIniciar.FlatStyle = FlatStyle.Flat
+        btnIniciar.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
         btnIniciar.ForeColor = Color.DarkMagenta
         btnIniciar.Location = New Point(197, 376)
         btnIniciar.Name = "btnIniciar"
         btnIniciar.Size = New Size(178, 32)
         btnIniciar.TabIndex = 6
-        btnIniciar.Text = "Iniciar session"
+        btnIniciar.Text = "Iniciar sesion"
         btnIniciar.UseVisualStyleBackColor = False
         ' 
         ' btnRegistrar
         ' 
         btnRegistrar.FlatAppearance.BorderSize = 0
+        btnRegistrar.FlatAppearance.MouseDownBackColor = Color.Thistle
+        btnRegistrar.FlatAppearance.MouseOverBackColor = Color.Thistle
         btnRegistrar.FlatStyle = FlatStyle.Flat
-        btnRegistrar.Font = New Font("Segoe UI", 10F)
+        btnRegistrar.Font = New Font("Segoe UI", 10.0F)
         btnRegistrar.ForeColor = Color.DarkMagenta
-        btnRegistrar.Location = New Point(235, 417)
+        btnRegistrar.Location = New Point(249, 414)
         btnRegistrar.Name = "btnRegistrar"
         btnRegistrar.Size = New Size(77, 26)
         btnRegistrar.TabIndex = 7
@@ -133,9 +139,11 @@ Partial Class Login
         ' lbUsuario
         ' 
         lbUsuario.AutoSize = True
+        lbUsuario.FlatStyle = FlatStyle.Flat
+        lbUsuario.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         lbUsuario.Location = New Point(235, 204)
         lbUsuario.Name = "lbUsuario"
-        lbUsuario.Size = New Size(47, 15)
+        lbUsuario.Size = New Size(49, 15)
         lbUsuario.TabIndex = 8
         lbUsuario.Text = "Usuario"
         ' 
@@ -150,6 +158,8 @@ Partial Class Login
         ' lbAdmin
         ' 
         lbAdmin.AutoSize = True
+        lbAdmin.FlatStyle = FlatStyle.Flat
+        lbAdmin.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         lbAdmin.Location = New Point(295, 204)
         lbAdmin.Name = "lbAdmin"
         lbAdmin.Size = New Size(43, 15)
@@ -158,7 +168,7 @@ Partial Class Login
         ' 
         ' Login
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Lavender
         ClientSize = New Size(557, 497)

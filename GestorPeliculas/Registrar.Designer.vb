@@ -53,6 +53,7 @@ Partial Class Registrar
         ' 
         ' txtDni
         ' 
+        txtDni.BackColor = Color.GhostWhite
         txtDni.Location = New Point(257, 231)
         txtDni.Name = "txtDni"
         txtDni.PlaceholderText = "Dni"
@@ -61,6 +62,7 @@ Partial Class Registrar
         ' 
         ' txtNombre
         ' 
+        txtNombre.BackColor = Color.GhostWhite
         txtNombre.Location = New Point(257, 280)
         txtNombre.Name = "txtNombre"
         txtNombre.PlaceholderText = "Nombre"
@@ -69,6 +71,7 @@ Partial Class Registrar
         ' 
         ' txtApel
         ' 
+        txtApel.BackColor = Color.GhostWhite
         txtApel.Location = New Point(257, 325)
         txtApel.Name = "txtApel"
         txtApel.PlaceholderText = "Apellidos"
@@ -77,6 +80,7 @@ Partial Class Registrar
         ' 
         ' txtTlf
         ' 
+        txtTlf.BackColor = Color.GhostWhite
         txtTlf.Location = New Point(257, 417)
         txtTlf.Name = "txtTlf"
         txtTlf.PlaceholderText = "Telefono"
@@ -85,6 +89,7 @@ Partial Class Registrar
         ' 
         ' txtEmail
         ' 
+        txtEmail.BackColor = Color.GhostWhite
         txtEmail.Location = New Point(257, 502)
         txtEmail.Name = "txtEmail"
         txtEmail.PlaceholderText = "Email"
@@ -93,6 +98,7 @@ Partial Class Registrar
         ' 
         ' txtDir
         ' 
+        txtDir.BackColor = Color.GhostWhite
         txtDir.Location = New Point(257, 370)
         txtDir.Name = "txtDir"
         txtDir.PlaceholderText = "Dirección"
@@ -101,6 +107,7 @@ Partial Class Registrar
         ' 
         ' TextBox1
         ' 
+        TextBox1.BackColor = Color.GhostWhite
         TextBox1.Location = New Point(257, 459)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Contraseña"
@@ -212,14 +219,13 @@ Partial Class Registrar
         ' 
         ' btmAtras
         ' 
-        btmAtras.BackColor = Color.Thistle
+        btmAtras.BackColor = Color.GhostWhite
         btmAtras.BackgroundImage = CType(resources.GetObject("btmAtras.BackgroundImage"), Image)
         btmAtras.BackgroundImageLayout = ImageLayout.Stretch
-        btmAtras.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         btmAtras.FlatAppearance.BorderSize = 0
-        btmAtras.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
-        btmAtras.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
-        btmAtras.FlatStyle = FlatStyle.Popup
+        btmAtras.FlatAppearance.MouseDownBackColor = Color.Thistle
+        btmAtras.FlatAppearance.MouseOverBackColor = Color.Thistle
+        btmAtras.FlatStyle = FlatStyle.Flat
         btmAtras.Location = New Point(12, 560)
         btmAtras.Name = "btmAtras"
         btmAtras.Size = New Size(40, 40)
