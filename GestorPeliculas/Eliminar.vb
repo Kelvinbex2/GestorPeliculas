@@ -1,10 +1,11 @@
 ﻿Public Class Eliminar
     Dim query As String = "DELETE FROM Admin WHERE email = @Email"
     Dim queryAdmin As String = "SELECT email FROM Admin"
-    Dim queryCliente As String = "SELECT email FROM Cliente"
     Dim querySelectAdmin As String = "SELECT nombre, apellidos, telefono, email FROM Admin WHERE email = @Email"
+    Dim queryCliente As String = "SELECT email FROM Cliente"
     Dim queryUs As String = "DELETE FROM Cliente WHERE email = @Email"
     Dim querySelectUs As String = "SELECT nombre, apellidos, telefono, email FROM Cliente WHERE email = @Email"
+
     Private Sub Eliminar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Mostrar Panel1 por defecto y ocultar los otros
         Panel1.Visible = True
@@ -63,8 +64,6 @@
 
         If MessageBox.Show("¿Está seguro de que desea eliminar este administrador?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Administrador.EliminarPorEmail(selectedEmail, query)
-
-
 
             Administrador.clear(TextBoxNombre, TextApel, TextTlf, TextEmail)
 
