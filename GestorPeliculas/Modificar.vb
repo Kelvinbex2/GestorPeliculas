@@ -42,6 +42,7 @@ Public Class Modificar
 
         ' Verificar si hay resultados y llenar los TextBox
         If dt.Rows.Count > 0 Then
+            txtId.Text = dt.Rows(0)("id_peli").ToString()
             txtStock.Text = dt.Rows(0)("stock").ToString()
             txtDir.Text = dt.Rows(0)("director").ToString()
             txtFec.Text = dt.Rows(0)("año").ToString()
@@ -71,7 +72,9 @@ Public Class Modificar
             conn.Open()
             Using da As New SQLiteDataAdapter(query, conn)
                 Using cmd As New SQLiteCommand(query, conn)
+
                     cmd.Parameters.AddWithValue("@titulo", ComboTitulo.SelectedItem.ToString())
+                    cmd.Parameters.AddWithValue("@id_peli", txtId.Text)
                     cmd.Parameters.AddWithValue("@director", txtDir.Text)
                     cmd.Parameters.AddWithValue("@año", txtFec.Text)
                     cmd.Parameters.AddWithValue("@genero", txtGen.Text)
@@ -87,5 +90,7 @@ Public Class Modificar
         MessageBox.Show("Película actualizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-
+    Private Sub sal_Click(sender As Object, e As EventArgs) Handles sal.Click
+        Me.Hide()
+    End Sub
 End Class
