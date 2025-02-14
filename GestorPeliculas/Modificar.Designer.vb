@@ -185,6 +185,7 @@ Partial Class Modificar
         ' 
         ' Panel1
         ' 
+        Panel1.BorderStyle = BorderStyle.Fixed3D
         Panel1.Controls.Add(PictureBox8)
         Panel1.Controls.Add(txtId)
         Panel1.Controls.Add(PictureBox2)
