@@ -16,10 +16,10 @@ Public Class Consultar
     End Sub
 
     Public Sub CargarAlquileresDePelicula(idPeli As Integer)
-        Dim query As String = "SELECT A.id_alqui, A.dni, A.id_pelicula, A.fecha_alquiler, A.fecha_devo, A.devuelto 
-                       FROM Alquiler A 
-                       JOIN Pelicula P ON A.id_pelicula = P.id_peli"
-
+        Dim query As String = "SELECT A.id_alqui, A.dni, P.id_peli, P.titulo, A.fecha_alquiler, A.fecha_devo, A.devuelto 
+                           FROM Alquiler A 
+                           JOIN Pelicula P ON A.id_pelicula = P.id_peli 
+                           WHERE P.id_peli = @idPeli"
 
         Dim dt As New DataTable()
 
@@ -35,16 +35,17 @@ Public Class Consultar
         ListViewAlquiler.Items.Clear()
 
         For Each row As DataRow In dt.Rows
-            Dim item As New ListViewItem(row("id_alqui").ToString()) ' Columna Id_Alquiler
+            Dim item As New ListViewItem(row("id_alqui").ToString()) ' ID del alquiler
             item.SubItems.Add(row("dni").ToString())
-            item.SubItems.Add(row("id_pelicula").ToString()) ' Ahora se muestra el ID de la película correctamente
+            ' item.SubItems.Add(row("id_peli").ToString()) ' Si quieres mostrar el título también cambiar el select en cargar alquileres listview 
+            item.SubItems.Add(row("titulo").ToString()) ' Si quieres mostrar el título también
             item.SubItems.Add(row("fecha_alquiler").ToString())
             item.SubItems.Add(row("fecha_devo").ToString())
             item.SubItems.Add(row("devuelto").ToString())
 
-
             ListViewAlquiler.Items.Add(item)
         Next
     End Sub
+
 
 End Class

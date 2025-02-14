@@ -222,7 +222,7 @@ Module Administrador
         For Each row As DataRow In dt.Rows
             Dim item As New ListViewItem(row("id_alqui").ToString()) ' Columna Id_Alquiler
             item.SubItems.Add(row("dni").ToString())
-            item.SubItems.Add(row("titulo").ToString()) ' Mostrar el título en lugar del id_pelicula
+            item.SubItems.Add(row("titulo").ToString()) ' Mostrar el título en lugar del id_pelicula(Si quieres cambiarlo a id cambiar el select)
             item.SubItems.Add(row("fecha_alquiler").ToString())
             item.SubItems.Add(row("fecha_devo").ToString())
             item.SubItems.Add(row("devuelto").ToString())

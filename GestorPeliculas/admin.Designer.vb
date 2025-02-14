@@ -63,6 +63,7 @@ Partial Class admin
         Panel1 = New Panel()
         lblMsg = New Label()
         lbluser = New Label()
+        ModificarPToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         Panel9.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
@@ -79,7 +80,7 @@ Partial Class admin
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {MenuToolStripMenuItem, AgregarAdminToolStripMenuItem, AgregarPeliculaToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {MenuToolStripMenuItem, AgregarAdminToolStripMenuItem, AgregarPeliculaToolStripMenuItem, ModificarPToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(742, 24)
@@ -96,19 +97,19 @@ Partial Class admin
         ' CerrarSessionToolStripMenuItem
         ' 
         CerrarSessionToolStripMenuItem.Name = "CerrarSessionToolStripMenuItem"
-        CerrarSessionToolStripMenuItem.Size = New Size(180, 22)
+        CerrarSessionToolStripMenuItem.Size = New Size(174, 22)
         CerrarSessionToolStripMenuItem.Text = "Cerrar session"
         ' 
         ' ConsultarToolStripMenuItem
         ' 
         ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        ConsultarToolStripMenuItem.Size = New Size(180, 22)
+        ConsultarToolStripMenuItem.Size = New Size(174, 22)
         ConsultarToolStripMenuItem.Text = "Consultar Peliculas"
         ' 
         ' OperacionesToolStripMenuItem
         ' 
         OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        OperacionesToolStripMenuItem.Size = New Size(180, 22)
+        OperacionesToolStripMenuItem.Size = New Size(174, 22)
         OperacionesToolStripMenuItem.Text = "Eliminar "
         ' 
         ' AgregarAdminToolStripMenuItem
@@ -479,6 +480,12 @@ Partial Class admin
         lbluser.Text = "user"
         lbluser.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' ModificarPToolStripMenuItem
+        ' 
+        ModificarPToolStripMenuItem.Name = "ModificarPToolStripMenuItem"
+        ModificarPToolStripMenuItem.Size = New Size(114, 20)
+        ModificarPToolStripMenuItem.Text = "Modificar Pelicula"
+        ' 
         ' admin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -555,4 +562,5 @@ Partial Class admin
     Friend WithEvents CerrarSessionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OperacionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarPToolStripMenuItem As ToolStripMenuItem
 End Class

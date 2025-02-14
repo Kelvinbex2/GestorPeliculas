@@ -31,12 +31,12 @@ Partial Class Consultar
         Stock = New ColumnHeader()
         Sinopsis = New ColumnHeader()
         ListViewAlquiler = New ListView()
-        ColumnHeader1 = New ColumnHeader()
-        ColumnHeader2 = New ColumnHeader()
-        ColumnHeader3 = New ColumnHeader()
-        ColumnHeader4 = New ColumnHeader()
-        ColumnHeader5 = New ColumnHeader()
-        ColumnHeader6 = New ColumnHeader()
+        Id_Aquiler = New ColumnHeader()
+        dni = New ColumnHeader()
+        id_Pelicula = New ColumnHeader()
+        Fecha_Alquiler = New ColumnHeader()
+        Fecha_devo = New ColumnHeader()
+        Devuelto = New ColumnHeader()
         Label1 = New Label()
         Label2 = New Label()
         SuspendLayout()
@@ -44,6 +44,8 @@ Partial Class Consultar
         ' ListViewPeliculas
         ' 
         ListViewPeliculas.Columns.AddRange(New ColumnHeader() {Id, Titulo, Director, Año, Genero, Stock, Sinopsis})
+        ListViewPeliculas.GridLines = True
+        ListViewPeliculas.HeaderStyle = ColumnHeaderStyle.Nonclickable
         ListViewPeliculas.Location = New Point(12, 66)
         ListViewPeliculas.Name = "ListViewPeliculas"
         ListViewPeliculas.Size = New Size(776, 389)
@@ -89,7 +91,9 @@ Partial Class Consultar
         ' ListViewAlquiler
         ' 
         ListViewAlquiler.BackColor = SystemColors.InactiveBorder
-        ListViewAlquiler.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3, ColumnHeader4, ColumnHeader5, ColumnHeader6})
+        ListViewAlquiler.Columns.AddRange(New ColumnHeader() {Id_Aquiler, dni, id_Pelicula, Fecha_Alquiler, Fecha_devo, Devuelto})
+        ListViewAlquiler.GridLines = True
+        ListViewAlquiler.HeaderStyle = ColumnHeaderStyle.Nonclickable
         ListViewAlquiler.Location = New Point(12, 515)
         ListViewAlquiler.Name = "ListViewAlquiler"
         ListViewAlquiler.Size = New Size(783, 280)
@@ -97,39 +101,39 @@ Partial Class Consultar
         ListViewAlquiler.UseCompatibleStateImageBehavior = False
         ListViewAlquiler.View = View.Details
         ' 
-        ' ColumnHeader1
+        ' Id_Aquiler
         ' 
-        ColumnHeader1.Text = "Id_Aquiler"
-        ColumnHeader1.Width = 80
+        Id_Aquiler.Text = "Id_Aquiler"
+        Id_Aquiler.Width = 80
         ' 
-        ' ColumnHeader2
+        ' dni
         ' 
-        ColumnHeader2.Text = "dni"
-        ColumnHeader2.Width = 100
+        dni.Text = "dni"
+        dni.Width = 100
         ' 
-        ' ColumnHeader3
+        ' id_Pelicula
         ' 
-        ColumnHeader3.Text = "id_Pelicula"
-        ColumnHeader3.Width = 100
+        id_Pelicula.Text = "id_Pelicula(Titulo)"
+        id_Pelicula.Width = 200
         ' 
-        ' ColumnHeader4
+        ' Fecha_Alquiler
         ' 
-        ColumnHeader4.Text = "Fecha_Alquiler"
-        ColumnHeader4.Width = 100
+        Fecha_Alquiler.Text = "Fecha_Alquiler"
+        Fecha_Alquiler.Width = 100
         ' 
-        ' ColumnHeader5
+        ' Fecha_devo
         ' 
-        ColumnHeader5.Text = "Fecha_devo"
-        ColumnHeader5.Width = 100
+        Fecha_devo.Text = "Fecha_devo"
+        Fecha_devo.Width = 100
         ' 
-        ' ColumnHeader6
+        ' Devuelto
         ' 
-        ColumnHeader6.Text = "Devuelto"
+        Devuelto.Text = "Devuelto"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 25.0F)
+        Label1.Font = New Font("Segoe UI", 25F)
         Label1.Location = New Point(316, 9)
         Label1.Name = "Label1"
         Label1.Size = New Size(146, 46)
@@ -139,7 +143,7 @@ Partial Class Consultar
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 25.0F)
+        Label2.Font = New Font("Segoe UI", 25F)
         Label2.Location = New Point(316, 466)
         Label2.Name = "Label2"
         Label2.Size = New Size(162, 46)
@@ -148,7 +152,7 @@ Partial Class Consultar
         ' 
         ' Consultar
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 807)
         Controls.Add(Label2)
@@ -170,12 +174,12 @@ Partial Class Consultar
     Friend WithEvents Stock As ColumnHeader
     Friend WithEvents Sinopsis As ColumnHeader
     Friend WithEvents ListViewAlquiler As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents Id_Aquiler As ColumnHeader
+    Friend WithEvents dni As ColumnHeader
+    Friend WithEvents id_Pelicula As ColumnHeader
+    Friend WithEvents Fecha_Alquiler As ColumnHeader
+    Friend WithEvents Fecha_devo As ColumnHeader
+    Friend WithEvents Devuelto As ColumnHeader
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
 End Class

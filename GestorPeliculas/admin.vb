@@ -105,4 +105,8 @@
         Consultar.Show()
         Me.Hide()
     End Sub
+
+    Private Sub ModificarPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarPToolStripMenuItem.Click
+        Modificar.Show()
+    End Sub
 End Class
