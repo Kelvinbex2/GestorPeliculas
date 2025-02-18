@@ -161,6 +161,7 @@ Partial Class Restablecer
         Controls.Add(txtEmail)
         Controls.Add(Panel1)
         Name = "Restablecer"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Restablecer"
         CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
