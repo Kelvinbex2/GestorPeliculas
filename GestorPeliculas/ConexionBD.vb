@@ -1,7 +1,11 @@
 ﻿Imports System.Data.SQLite
+Imports System.IO
 
 Module ConexionBD
-    Private ReadOnly ConnectionString As String = "Data Source=C:\Users\diurno\source\repos\GestorPeliculas\videoClub.db; Version=3;"
+    Private nombrebd As String = "videoClub.db"
+    Private ruta As String = Path.GetFullPath(Path.Combine(Application.StartupPath, "..\..\..\..\videoClub.db"))
+    Private ReadOnly ConnectionString As String = "Data Source=" & ruta & "; Version=3;"
+
 
     Public Function ObtenerConexion() As SQLiteConnection
         Dim con As New SQLiteConnection(ConnectionString)
