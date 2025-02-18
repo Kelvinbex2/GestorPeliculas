@@ -39,6 +39,9 @@ Partial Class Consultar
         Devuelto = New ColumnHeader()
         Label1 = New Label()
         Label2 = New Label()
+        MenuStrip1 = New MenuStrip()
+        SalirToolStripMenuItem = New ToolStripMenuItem()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' ListViewPeliculas
@@ -150,6 +153,21 @@ Partial Class Consultar
         Label2.TabIndex = 3
         Label2.Text = "Alquilado"
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {SalirToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(800, 24)
+        MenuStrip1.TabIndex = 4
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' SalirToolStripMenuItem
+        ' 
+        SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        SalirToolStripMenuItem.Size = New Size(41, 20)
+        SalirToolStripMenuItem.Text = "Salir"
+        ' 
         ' Consultar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -159,8 +177,12 @@ Partial Class Consultar
         Controls.Add(Label1)
         Controls.Add(ListViewAlquiler)
         Controls.Add(ListViewPeliculas)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
         Name = "Consultar"
         Text = "Consultar"
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -182,4 +204,6 @@ Partial Class Consultar
     Friend WithEvents Devuelto As ColumnHeader
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
 End Class
