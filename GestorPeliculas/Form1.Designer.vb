@@ -78,6 +78,7 @@ Partial Class Form1
         Controls.Add(ProgressBar1)
         ForeColor = SystemColors.ActiveCaptionText
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "KelvinBex club"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
