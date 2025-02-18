@@ -47,5 +47,8 @@ Public Class Consultar
         Next
     End Sub
 
-
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        admin.Show()
+        Me.Hide()
+    End Sub
 End Class

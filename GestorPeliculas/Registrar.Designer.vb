@@ -267,6 +267,7 @@ Partial Class Registrar
         Controls.Add(txtNombre)
         Controls.Add(txtDni)
         Name = "Registrar"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Registrar"
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

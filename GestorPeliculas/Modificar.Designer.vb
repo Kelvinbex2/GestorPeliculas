@@ -40,6 +40,7 @@ Partial Class Modificar
         PictureBox8 = New PictureBox()
         txtId = New TextBox()
         sal = New Button()
+        PictureBox1 = New PictureBox()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
@@ -48,6 +49,7 @@ Partial Class Modificar
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' ComboTitulo
@@ -186,6 +188,7 @@ Partial Class Modificar
         ' Panel1
         ' 
         Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(PictureBox8)
         Panel1.Controls.Add(txtId)
         Panel1.Controls.Add(PictureBox2)
@@ -201,7 +204,7 @@ Partial Class Modificar
         Panel1.Controls.Add(txtSip)
         Panel1.Controls.Add(PictureBox3)
         Panel1.Controls.Add(btnAceptar)
-        Panel1.Location = New Point(107, 78)
+        Panel1.Location = New Point(41, 43)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(291, 430)
         Panel1.TabIndex = 73
@@ -229,21 +232,32 @@ Partial Class Modificar
         ' 
         ' sal
         ' 
-        sal.Location = New Point(437, 506)
+        sal.Location = New Point(338, 450)
         sal.Name = "sal"
-        sal.Size = New Size(75, 23)
+        sal.Size = New Size(61, 23)
         sal.TabIndex = 74
         sal.Text = "Salir"
         sal.UseVisualStyleBackColor = True
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(91, 3)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(96, 83)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 75
+        PictureBox1.TabStop = False
         ' 
         ' Modificar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(515, 541)
+        ClientSize = New Size(411, 505)
         Controls.Add(sal)
         Controls.Add(Panel1)
         Name = "Modificar"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Modificar"
         CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
@@ -254,6 +268,7 @@ Partial Class Modificar
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -274,4 +289,5 @@ Partial Class Modificar
     Friend WithEvents sal As Button
     Friend WithEvents txtId As TextBox
     Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

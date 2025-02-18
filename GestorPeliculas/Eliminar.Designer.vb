@@ -50,6 +50,7 @@ Partial Class Eliminar
         Panel11 = New Panel()
         Panel10 = New Panel()
         Panel3 = New Panel()
+        txtStock = New TextBox()
         btnAcpPeli = New Button()
         txtSip = New TextBox()
         Label5 = New Label()
@@ -69,7 +70,6 @@ Partial Class Eliminar
         UsuarioToolStripMenuItem1 = New ToolStripMenuItem()
         PeliculaToolStripMenuItem1 = New ToolStripMenuItem()
         btmAtras = New Button()
-        txtStock = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -106,7 +106,7 @@ Partial Class Eliminar
         btnAcpAdmin.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAcpAdmin.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAcpAdmin.FlatStyle = FlatStyle.Flat
-        btnAcpAdmin.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnAcpAdmin.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         btnAcpAdmin.Location = New Point(70, 343)
         btnAcpAdmin.Name = "btnAcpAdmin"
         btnAcpAdmin.Size = New Size(75, 23)
@@ -196,7 +196,7 @@ Partial Class Eliminar
         ' lbAdmin
         ' 
         lbAdmin.AutoSize = True
-        lbAdmin.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        lbAdmin.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         lbAdmin.Location = New Point(92, 72)
         lbAdmin.Name = "lbAdmin"
         lbAdmin.Size = New Size(43, 15)
@@ -251,7 +251,7 @@ Partial Class Eliminar
         btnAcpUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAcpUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAcpUser.FlatStyle = FlatStyle.Flat
-        btnAcpUser.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnAcpUser.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         btnAcpUser.Location = New Point(73, 343)
         btnAcpUser.Name = "btnAcpUser"
         btnAcpUser.Size = New Size(75, 23)
@@ -274,7 +274,7 @@ Partial Class Eliminar
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label3.Location = New Point(92, 72)
         Label3.Name = "Label3"
         Label3.Size = New Size(49, 15)
@@ -390,6 +390,14 @@ Partial Class Eliminar
         Panel3.Size = New Size(227, 426)
         Panel3.TabIndex = 41
         ' 
+        ' txtStock
+        ' 
+        txtStock.Location = New Point(175, 97)
+        txtStock.Name = "txtStock"
+        txtStock.PlaceholderText = "Stock"
+        txtStock.Size = New Size(45, 23)
+        txtStock.TabIndex = 72
+        ' 
         ' btnAcpPeli
         ' 
         btnAcpPeli.BackColor = Color.FromArgb(CByte(227), CByte(234), CByte(241))
@@ -398,7 +406,7 @@ Partial Class Eliminar
         btnAcpPeli.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAcpPeli.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAcpPeli.FlatStyle = FlatStyle.Flat
-        btnAcpPeli.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnAcpPeli.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         btnAcpPeli.Location = New Point(81, 343)
         btnAcpPeli.Name = "btnAcpPeli"
         btnAcpPeli.Size = New Size(75, 23)
@@ -421,7 +429,7 @@ Partial Class Eliminar
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label5.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label5.Location = New Point(92, 72)
         Label5.Name = "Label5"
         Label5.Size = New Size(106, 15)
@@ -545,21 +553,21 @@ Partial Class Eliminar
         ' 
         ' AdministradorToolStripMenuItem1
         ' 
-        AdministradorToolStripMenuItem1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        AdministradorToolStripMenuItem1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         AdministradorToolStripMenuItem1.Name = "AdministradorToolStripMenuItem1"
         AdministradorToolStripMenuItem1.Size = New Size(98, 20)
         AdministradorToolStripMenuItem1.Text = "Administrador"
         ' 
         ' UsuarioToolStripMenuItem1
         ' 
-        UsuarioToolStripMenuItem1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        UsuarioToolStripMenuItem1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
         UsuarioToolStripMenuItem1.Size = New Size(61, 20)
         UsuarioToolStripMenuItem1.Text = "Usuario"
         ' 
         ' PeliculaToolStripMenuItem1
         ' 
-        PeliculaToolStripMenuItem1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        PeliculaToolStripMenuItem1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         PeliculaToolStripMenuItem1.Name = "PeliculaToolStripMenuItem1"
         PeliculaToolStripMenuItem1.Size = New Size(61, 20)
         PeliculaToolStripMenuItem1.Text = "Pelicula"
@@ -579,17 +587,9 @@ Partial Class Eliminar
         btmAtras.TabIndex = 45
         btmAtras.UseVisualStyleBackColor = False
         ' 
-        ' txtStock
-        ' 
-        txtStock.Location = New Point(175, 97)
-        txtStock.Name = "txtStock"
-        txtStock.PlaceholderText = "Stock"
-        txtStock.Size = New Size(45, 23)
-        txtStock.TabIndex = 72
-        ' 
         ' Eliminar
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         ClientSize = New Size(792, 560)
@@ -602,6 +602,7 @@ Partial Class Eliminar
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Eliminar"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "+"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

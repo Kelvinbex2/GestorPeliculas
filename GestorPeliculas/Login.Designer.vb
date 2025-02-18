@@ -74,7 +74,7 @@ Partial Class Login
         btnRestablecer.FlatAppearance.MouseDownBackColor = Color.Thistle
         btnRestablecer.FlatAppearance.MouseOverBackColor = Color.Thistle
         btnRestablecer.FlatStyle = FlatStyle.Flat
-        btnRestablecer.Font = New Font("Segoe UI", 8.0F)
+        btnRestablecer.Font = New Font("Segoe UI", 8F)
         btnRestablecer.ForeColor = Color.DarkMagenta
         btnRestablecer.Location = New Point(211, 320)
         btnRestablecer.Name = "btnRestablecer"
@@ -112,7 +112,7 @@ Partial Class Login
         btnIniciar.FlatAppearance.MouseDownBackColor = Color.Thistle
         btnIniciar.FlatAppearance.MouseOverBackColor = Color.Thistle
         btnIniciar.FlatStyle = FlatStyle.Flat
-        btnIniciar.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
+        btnIniciar.Font = New Font("Segoe UI", 14F, FontStyle.Bold)
         btnIniciar.ForeColor = Color.DarkMagenta
         btnIniciar.Location = New Point(197, 376)
         btnIniciar.Name = "btnIniciar"
@@ -127,7 +127,7 @@ Partial Class Login
         btnRegistrar.FlatAppearance.MouseDownBackColor = Color.Thistle
         btnRegistrar.FlatAppearance.MouseOverBackColor = Color.Thistle
         btnRegistrar.FlatStyle = FlatStyle.Flat
-        btnRegistrar.Font = New Font("Segoe UI", 10.0F)
+        btnRegistrar.Font = New Font("Segoe UI", 10F)
         btnRegistrar.ForeColor = Color.DarkMagenta
         btnRegistrar.Location = New Point(249, 414)
         btnRegistrar.Name = "btnRegistrar"
@@ -140,7 +140,7 @@ Partial Class Login
         ' 
         lbUsuario.AutoSize = True
         lbUsuario.FlatStyle = FlatStyle.Flat
-        lbUsuario.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        lbUsuario.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         lbUsuario.Location = New Point(235, 204)
         lbUsuario.Name = "lbUsuario"
         lbUsuario.Size = New Size(49, 15)
@@ -159,7 +159,7 @@ Partial Class Login
         ' 
         lbAdmin.AutoSize = True
         lbAdmin.FlatStyle = FlatStyle.Flat
-        lbAdmin.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
+        lbAdmin.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         lbAdmin.Location = New Point(295, 204)
         lbAdmin.Name = "lbAdmin"
         lbAdmin.Size = New Size(43, 15)
@@ -168,7 +168,7 @@ Partial Class Login
         ' 
         ' Login
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Lavender
         ClientSize = New Size(557, 497)
@@ -184,6 +184,7 @@ Partial Class Login
         Controls.Add(txtUsuario)
         Controls.Add(PictureBox1)
         Name = "Login"
+        StartPosition = FormStartPosition.CenterScreen
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()

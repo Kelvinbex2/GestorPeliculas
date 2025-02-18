@@ -30,6 +30,7 @@ Partial Class admin
         OperacionesToolStripMenuItem = New ToolStripMenuItem()
         AgregarAdminToolStripMenuItem = New ToolStripMenuItem()
         AgregarPeliculaToolStripMenuItem = New ToolStripMenuItem()
+        ModificarPToolStripMenuItem = New ToolStripMenuItem()
         Panel9 = New Panel()
         btnAcep = New Button()
         TextContra = New TextBox()
@@ -63,7 +64,6 @@ Partial Class admin
         Panel1 = New Panel()
         lblMsg = New Label()
         lbluser = New Label()
-        ModificarPToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         Panel9.SuspendLayout()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
@@ -123,6 +123,12 @@ Partial Class admin
         AgregarPeliculaToolStripMenuItem.Name = "AgregarPeliculaToolStripMenuItem"
         AgregarPeliculaToolStripMenuItem.Size = New Size(105, 20)
         AgregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula"
+        ' 
+        ' ModificarPToolStripMenuItem
+        ' 
+        ModificarPToolStripMenuItem.Name = "ModificarPToolStripMenuItem"
+        ModificarPToolStripMenuItem.Size = New Size(114, 20)
+        ModificarPToolStripMenuItem.Text = "Modificar Pelicula"
         ' 
         ' Panel9
         ' 
@@ -480,12 +486,6 @@ Partial Class admin
         lbluser.Text = "user"
         lbluser.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ModificarPToolStripMenuItem
-        ' 
-        ModificarPToolStripMenuItem.Name = "ModificarPToolStripMenuItem"
-        ModificarPToolStripMenuItem.Size = New Size(114, 20)
-        ModificarPToolStripMenuItem.Text = "Modificar Pelicula"
-        ' 
         ' admin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -502,6 +502,7 @@ Partial Class admin
         DoubleBuffered = True
         MainMenuStrip = MenuStrip1
         Name = "admin"
+        StartPosition = FormStartPosition.CenterScreen
         Text = " "
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()

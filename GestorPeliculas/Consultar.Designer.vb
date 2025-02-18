@@ -180,6 +180,7 @@ Partial Class Consultar
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Consultar"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Consultar"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
