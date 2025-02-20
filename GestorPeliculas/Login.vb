@@ -25,7 +25,9 @@
             End If
         Else
             If nombreUsuario <> "" Then
-                MessageBox.Show("¡Bienvenido Usuario!", "Acceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Cliente.Show()
+                Me.Hide()
+
             Else
                 MessageBox.Show("Credenciales incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
