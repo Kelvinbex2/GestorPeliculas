@@ -37,10 +37,10 @@ Partial Class Modificar
         txtGen = New TextBox()
         PictureBox2 = New PictureBox()
         Panel1 = New Panel()
+        PictureBox1 = New PictureBox()
         PictureBox8 = New PictureBox()
         txtId = New TextBox()
         sal = New Button()
-        PictureBox1 = New PictureBox()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
@@ -48,14 +48,14 @@ Partial Class Modificar
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' ComboTitulo
         ' 
         ComboTitulo.FormattingEnabled = True
-        ComboTitulo.Location = New Point(43, 150)
+        ComboTitulo.Location = New Point(43, 169)
         ComboTitulo.Name = "ComboTitulo"
         ComboTitulo.Size = New Size(221, 23)
         ComboTitulo.TabIndex = 0
@@ -63,7 +63,7 @@ Partial Class Modificar
         ' txtFec
         ' 
         txtFec.BackColor = Color.WhiteSmoke
-        txtFec.Location = New Point(43, 276)
+        txtFec.Location = New Point(43, 295)
         txtFec.Name = "txtFec"
         txtFec.PlaceholderText = "Fecha"
         txtFec.Size = New Size(221, 23)
@@ -73,7 +73,7 @@ Partial Class Modificar
         ' 
         PictureBox7.BackColor = Color.WhiteSmoke
         PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
-        PictureBox7.Location = New Point(17, 354)
+        PictureBox7.Location = New Point(17, 373)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(20, 23)
         PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
@@ -84,7 +84,7 @@ Partial Class Modificar
         ' 
         PictureBox6.BackColor = Color.WhiteSmoke
         PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
-        PictureBox6.Location = New Point(17, 318)
+        PictureBox6.Location = New Point(17, 337)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(20, 23)
         PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
@@ -95,7 +95,7 @@ Partial Class Modificar
         ' 
         PictureBox5.BackColor = Color.WhiteSmoke
         PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(17, 276)
+        PictureBox5.Location = New Point(17, 295)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(20, 23)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
@@ -106,7 +106,7 @@ Partial Class Modificar
         ' 
         PictureBox4.BackColor = Color.WhiteSmoke
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(17, 234)
+        PictureBox4.Location = New Point(17, 253)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(20, 23)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -117,7 +117,7 @@ Partial Class Modificar
         ' 
         PictureBox3.BackColor = Color.WhiteSmoke
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(17, 190)
+        PictureBox3.Location = New Point(17, 209)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(20, 23)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
@@ -131,7 +131,7 @@ Partial Class Modificar
         btnAceptar.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAceptar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(172), CByte(184), CByte(196))
         btnAceptar.FlatStyle = FlatStyle.Flat
-        btnAceptar.Location = New Point(112, 390)
+        btnAceptar.Location = New Point(112, 409)
         btnAceptar.Name = "btnAceptar"
         btnAceptar.Size = New Size(75, 23)
         btnAceptar.TabIndex = 65
@@ -141,7 +141,7 @@ Partial Class Modificar
         ' txtSip
         ' 
         txtSip.BackColor = Color.WhiteSmoke
-        txtSip.Location = New Point(43, 354)
+        txtSip.Location = New Point(43, 373)
         txtSip.Name = "txtSip"
         txtSip.PlaceholderText = "Sipnosis"
         txtSip.Size = New Size(221, 23)
@@ -150,7 +150,7 @@ Partial Class Modificar
         ' txtStock
         ' 
         txtStock.BackColor = Color.WhiteSmoke
-        txtStock.Location = New Point(43, 193)
+        txtStock.Location = New Point(43, 212)
         txtStock.Name = "txtStock"
         txtStock.PlaceholderText = "stock"
         txtStock.Size = New Size(221, 23)
@@ -159,7 +159,7 @@ Partial Class Modificar
         ' txtDir
         ' 
         txtDir.BackColor = Color.WhiteSmoke
-        txtDir.Location = New Point(43, 234)
+        txtDir.Location = New Point(43, 253)
         txtDir.Name = "txtDir"
         txtDir.PlaceholderText = "Director"
         txtDir.Size = New Size(221, 23)
@@ -168,7 +168,7 @@ Partial Class Modificar
         ' txtGen
         ' 
         txtGen.BackColor = Color.WhiteSmoke
-        txtGen.Location = New Point(43, 318)
+        txtGen.Location = New Point(43, 337)
         txtGen.Name = "txtGen"
         txtGen.PlaceholderText = "Genero"
         txtGen.Size = New Size(221, 23)
@@ -178,7 +178,7 @@ Partial Class Modificar
         ' 
         PictureBox2.BackColor = Color.WhiteSmoke
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(17, 150)
+        PictureBox2.Location = New Point(17, 169)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(20, 23)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -204,16 +204,26 @@ Partial Class Modificar
         Panel1.Controls.Add(txtSip)
         Panel1.Controls.Add(PictureBox3)
         Panel1.Controls.Add(btnAceptar)
-        Panel1.Location = New Point(41, 43)
+        Panel1.Location = New Point(41, 23)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(291, 430)
+        Panel1.Size = New Size(291, 450)
         Panel1.TabIndex = 73
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(91, 12)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(96, 105)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 75
+        PictureBox1.TabStop = False
         ' 
         ' PictureBox8
         ' 
         PictureBox8.BackColor = Color.GhostWhite
         PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), Image)
-        PictureBox8.Location = New Point(17, 114)
+        PictureBox8.Location = New Point(17, 133)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(20, 23)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
@@ -224,7 +234,7 @@ Partial Class Modificar
         ' 
         txtId.BackColor = Color.WhiteSmoke
         txtId.Enabled = False
-        txtId.Location = New Point(43, 114)
+        txtId.Location = New Point(43, 133)
         txtId.Name = "txtId"
         txtId.PlaceholderText = "Id"
         txtId.Size = New Size(221, 23)
@@ -238,16 +248,6 @@ Partial Class Modificar
         sal.TabIndex = 74
         sal.Text = "Salir"
         sal.UseVisualStyleBackColor = True
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(91, 3)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(96, 83)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 75
-        PictureBox1.TabStop = False
         ' 
         ' Modificar
         ' 
@@ -267,8 +267,8 @@ Partial Class Modificar
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
