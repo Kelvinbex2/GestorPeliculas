@@ -11,7 +11,7 @@
         Dim usuario As String = txtUsuario.Text
         Dim contrasena As String = txtPassword.Text
 
-
+        ' Verificar credenciales, pasando la variable esAdmin para saber si es cliente o admin
         Dim nombreUsuario As String = VerificarCredenciales(usuario, contrasena, esAdmin)
 
         If esAdmin Then
@@ -25,15 +25,24 @@
             End If
         Else
             If nombreUsuario <> "" Then
-                Cliente.Show()
+                ' Obtener el DNI del cliente (usamos la función para obtener el DNI)
+                Dim dni As String = Cliente.ObtenerDniPorEmail(usuario)
+
+                ' Crear una instancia del formulario Cliente
+                Dim clienteForm As New Cliente()
+
+                ' Pasar el DNI al formulario Cliente para cargar sus datos
+                clienteForm.CargarDatosCliente(dni)
+
+                ' Mostrar el formulario Cliente
+                clienteForm.Show()
                 Me.Hide()
-
-
             Else
                 MessageBox.Show("Credenciales incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End If
     End Sub
+
 
 
     Private Sub lbAdmin_Click(sender As Object, e As EventArgs) Handles lbAdmin.Click

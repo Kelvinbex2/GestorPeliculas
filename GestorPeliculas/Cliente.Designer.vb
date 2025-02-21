@@ -172,6 +172,7 @@ Partial Class Cliente
         ' lblAlquilados
         ' 
         lblAlquilados.BorderStyle = BorderStyle.Fixed3D
+        lblAlquilados.Font = New Font("Segoe UI", 10F)
         lblAlquilados.Location = New Point(3, 373)
         lblAlquilados.Name = "lblAlquilados"
         lblAlquilados.Size = New Size(148, 34)
@@ -181,6 +182,7 @@ Partial Class Cliente
         ' lblCorreo
         ' 
         lblCorreo.BorderStyle = BorderStyle.Fixed3D
+        lblCorreo.Font = New Font("Segoe UI", 10F)
         lblCorreo.Location = New Point(3, 328)
         lblCorreo.Name = "lblCorreo"
         lblCorreo.Size = New Size(148, 34)
@@ -190,6 +192,7 @@ Partial Class Cliente
         ' lblApel
         ' 
         lblApel.BorderStyle = BorderStyle.Fixed3D
+        lblApel.Font = New Font("Segoe UI", 10F)
         lblApel.Location = New Point(3, 276)
         lblApel.Name = "lblApel"
         lblApel.Size = New Size(148, 34)
@@ -199,6 +202,7 @@ Partial Class Cliente
         ' lblNombre
         ' 
         lblNombre.BorderStyle = BorderStyle.Fixed3D
+        lblNombre.Font = New Font("Segoe UI", 10F)
         lblNombre.Location = New Point(3, 230)
         lblNombre.Name = "lblNombre"
         lblNombre.Size = New Size(148, 34)
@@ -655,7 +659,7 @@ Partial Class Cliente
         Panel15.BorderStyle = BorderStyle.Fixed3D
         Panel15.Controls.Add(btndevolvr)
         Panel15.Controls.Add(PictureBox14)
-        Panel15.Location = New Point(193, 236)
+        Panel15.Location = New Point(193, 231)
         Panel15.Name = "Panel15"
         Panel15.Size = New Size(161, 181)
         Panel15.TabIndex = 10
