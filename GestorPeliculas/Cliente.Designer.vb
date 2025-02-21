@@ -27,6 +27,9 @@ Partial Class Cliente
         Button2 = New Button()
         PictureBox3 = New PictureBox()
         Panel7 = New Panel()
+        lblApel = New Label()
+        lblNombre = New Label()
+        PictureBox16 = New PictureBox()
         PictureBox1 = New PictureBox()
         btnAlqui = New Button()
         Panel1 = New Panel()
@@ -69,8 +72,13 @@ Partial Class Cliente
         Panel16 = New Panel()
         btnSal = New Button()
         PictureBox15 = New PictureBox()
+        lblCorreo = New Label()
+        lblAlquilados = New Label()
+        lblBien = New Label()
         Panel3.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        Panel7.SuspendLayout()
+        CType(PictureBox16, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -140,10 +148,45 @@ Partial Class Cliente
         ' Panel7
         ' 
         Panel7.BorderStyle = BorderStyle.Fixed3D
+        Panel7.Controls.Add(lblBien)
+        Panel7.Controls.Add(lblAlquilados)
+        Panel7.Controls.Add(lblCorreo)
+        Panel7.Controls.Add(lblApel)
+        Panel7.Controls.Add(lblNombre)
+        Panel7.Controls.Add(PictureBox16)
         Panel7.Location = New Point(3, 0)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(158, 447)
         Panel7.TabIndex = 3
+        ' 
+        ' lblApel
+        ' 
+        lblApel.BorderStyle = BorderStyle.Fixed3D
+        lblApel.Location = New Point(3, 276)
+        lblApel.Name = "lblApel"
+        lblApel.Size = New Size(148, 34)
+        lblApel.TabIndex = 4
+        lblApel.Text = "Apellidos"
+        ' 
+        ' lblNombre
+        ' 
+        lblNombre.BorderStyle = BorderStyle.Fixed3D
+        lblNombre.Location = New Point(3, 230)
+        lblNombre.Name = "lblNombre"
+        lblNombre.Size = New Size(148, 34)
+        lblNombre.TabIndex = 3
+        lblNombre.Text = "Nombre"
+        ' 
+        ' PictureBox16
+        ' 
+        PictureBox16.Image = CType(resources.GetObject("PictureBox16.Image"), Image)
+        PictureBox16.InitialImage = Nothing
+        PictureBox16.Location = New Point(12, 8)
+        PictureBox16.Name = "PictureBox16"
+        PictureBox16.Size = New Size(124, 119)
+        PictureBox16.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox16.TabIndex = 2
+        PictureBox16.TabStop = False
         ' 
         ' PictureBox1
         ' 
@@ -584,7 +627,7 @@ Partial Class Cliente
         Panel15.BorderStyle = BorderStyle.Fixed3D
         Panel15.Controls.Add(btndevolvr)
         Panel15.Controls.Add(PictureBox14)
-        Panel15.Location = New Point(362, 231)
+        Panel15.Location = New Point(193, 236)
         Panel15.Name = "Panel15"
         Panel15.Size = New Size(161, 181)
         Panel15.TabIndex = 10
@@ -620,7 +663,7 @@ Partial Class Cliente
         Panel16.BorderStyle = BorderStyle.Fixed3D
         Panel16.Controls.Add(btnSal)
         Panel16.Controls.Add(PictureBox15)
-        Panel16.Location = New Point(193, 231)
+        Panel16.Location = New Point(362, 231)
         Panel16.Name = "Panel16"
         Panel16.Size = New Size(161, 181)
         Panel16.TabIndex = 11
@@ -651,6 +694,34 @@ Partial Class Cliente
         PictureBox15.TabIndex = 0
         PictureBox15.TabStop = False
         ' 
+        ' lblCorreo
+        ' 
+        lblCorreo.BorderStyle = BorderStyle.Fixed3D
+        lblCorreo.Location = New Point(3, 328)
+        lblCorreo.Name = "lblCorreo"
+        lblCorreo.Size = New Size(148, 34)
+        lblCorreo.TabIndex = 5
+        lblCorreo.Text = "Correo"
+        ' 
+        ' lblAlquilados
+        ' 
+        lblAlquilados.BorderStyle = BorderStyle.Fixed3D
+        lblAlquilados.Location = New Point(3, 373)
+        lblAlquilados.Name = "lblAlquilados"
+        lblAlquilados.Size = New Size(148, 34)
+        lblAlquilados.TabIndex = 6
+        lblAlquilados.Text = "Alquilado"
+        ' 
+        ' lblBien
+        ' 
+        lblBien.BorderStyle = BorderStyle.Fixed3D
+        lblBien.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblBien.Location = New Point(3, 151)
+        lblBien.Name = "lblBien"
+        lblBien.Size = New Size(148, 34)
+        lblBien.TabIndex = 7
+        lblBien.Text = "Bienvenido"
+        ' 
         ' Cliente
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -675,6 +746,8 @@ Partial Class Cliente
         Text = "Cliente"
         Panel3.ResumeLayout(False)
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        Panel7.ResumeLayout(False)
+        CType(PictureBox16, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -751,4 +824,10 @@ Partial Class Cliente
     Friend WithEvents Panel16 As Panel
     Friend WithEvents btnSal As Button
     Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents lblApel As Label
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents lblBien As Label
+    Friend WithEvents lblAlquilados As Label
+    Friend WithEvents lblCorreo As Label
 End Class
