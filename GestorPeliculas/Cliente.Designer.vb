@@ -731,7 +731,7 @@ Partial Class Cliente
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Lavender
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(708, 450)
         Controls.Add(Panel16)
         Controls.Add(Panel15)
         Controls.Add(Panel13)
@@ -747,6 +747,7 @@ Partial Class Cliente
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Name = "Cliente"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Cliente"
         Panel3.ResumeLayout(False)
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
