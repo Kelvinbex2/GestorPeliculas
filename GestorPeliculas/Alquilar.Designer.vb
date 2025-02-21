@@ -23,62 +23,68 @@ Partial Class Alquilar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        lblAnño = New Label()
-        Titulo = New Label()
-        checkAquila = New CheckBox()
-        PictureBox1 = New PictureBox()
+        ComboBox1 = New ComboBox()
+        txtDirec = New TextBox()
+        txtGen = New TextBox()
+        txt = New TextBox()
+        CheckBox1 = New CheckBox()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BorderStyle = BorderStyle.Fixed3D
-        Panel1.Controls.Add(lblAnño)
-        Panel1.Controls.Add(Titulo)
-        Panel1.Controls.Add(checkAquila)
-        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(CheckBox1)
+        Panel1.Controls.Add(txt)
+        Panel1.Controls.Add(txtGen)
+        Panel1.Controls.Add(txtDirec)
+        Panel1.Controls.Add(ComboBox1)
         Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(179, 124)
+        Panel1.Size = New Size(342, 382)
         Panel1.TabIndex = 0
         ' 
-        ' lblAnño
+        ' ComboBox1
         ' 
-        lblAnño.Location = New Point(3, 93)
-        lblAnño.Name = "lblAnño"
-        lblAnño.Size = New Size(173, 23)
-        lblAnño.TabIndex = 3
-        lblAnño.Text = "Año"
-        lblAnño.TextAlign = ContentAlignment.MiddleCenter
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(18, 60)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(121, 23)
+        ComboBox1.TabIndex = 0
         ' 
-        ' Titulo
+        ' txtDirec
         ' 
-        Titulo.Location = New Point(3, 70)
-        Titulo.Name = "Titulo"
-        Titulo.Size = New Size(173, 23)
-        Titulo.TabIndex = 2
-        Titulo.Text = "Titulo"
-        Titulo.TextAlign = ContentAlignment.MiddleLeft
+        txtDirec.Location = New Point(18, 103)
+        txtDirec.Name = "txtDirec"
+        txtDirec.PlaceholderText = "Director"
+        txtDirec.Size = New Size(197, 23)
+        txtDirec.TabIndex = 1
         ' 
-        ' checkAquila
+        ' txtGen
         ' 
-        checkAquila.AutoSize = True
-        checkAquila.Location = New Point(79, 18)
-        checkAquila.Name = "checkAquila"
-        checkAquila.Size = New Size(63, 19)
-        checkAquila.TabIndex = 1
-        checkAquila.Text = "Alquila"
-        checkAquila.UseVisualStyleBackColor = True
+        txtGen.Location = New Point(18, 132)
+        txtGen.Name = "txtGen"
+        txtGen.PlaceholderText = "Genero"
+        txtGen.Size = New Size(197, 23)
+        txtGen.TabIndex = 2
         ' 
-        ' PictureBox1
+        ' txt
         ' 
-        PictureBox1.BorderStyle = BorderStyle.Fixed3D
-        PictureBox1.Location = New Point(3, 3)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(61, 47)
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
+        txt.Location = New Point(18, 161)
+        txt.Name = "txt"
+        txt.PlaceholderText = "Año"
+        txt.Size = New Size(197, 23)
+        txt.TabIndex = 3
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(18, 190)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(80, 19)
+        CheckBox1.TabIndex = 4
+        CheckBox1.Text = "¿Alquilar ?"
+        CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Alquilar
         ' 
@@ -90,15 +96,15 @@ Partial Class Alquilar
         Text = "Alquilar"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Titulo As Label
-    Friend WithEvents checkAquila As CheckBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lblAnño As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents txt As TextBox
+    Friend WithEvents txtGen As TextBox
+    Friend WithEvents txtDirec As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
 
-    
+
 End Class

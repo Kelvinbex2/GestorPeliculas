@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SQLite
 Imports System.Windows.Forms
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Module GestorClientes
 
@@ -45,6 +46,9 @@ Module GestorClientes
             End If
         End Using
     End Function
+
+
+
 
 
 End Module
