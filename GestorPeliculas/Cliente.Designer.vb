@@ -27,6 +27,9 @@ Partial Class Cliente
         Button2 = New Button()
         PictureBox3 = New PictureBox()
         Panel7 = New Panel()
+        lblBien = New Label()
+        lblAlquilados = New Label()
+        lblCorreo = New Label()
         lblApel = New Label()
         lblNombre = New Label()
         PictureBox16 = New PictureBox()
@@ -72,9 +75,6 @@ Partial Class Cliente
         Panel16 = New Panel()
         btnSal = New Button()
         PictureBox15 = New PictureBox()
-        lblCorreo = New Label()
-        lblAlquilados = New Label()
-        lblBien = New Label()
         Panel3.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
@@ -158,6 +158,34 @@ Partial Class Cliente
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(158, 447)
         Panel7.TabIndex = 3
+        ' 
+        ' lblBien
+        ' 
+        lblBien.BorderStyle = BorderStyle.Fixed3D
+        lblBien.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblBien.Location = New Point(3, 151)
+        lblBien.Name = "lblBien"
+        lblBien.Size = New Size(148, 34)
+        lblBien.TabIndex = 7
+        lblBien.Text = "Bienvenido"
+        ' 
+        ' lblAlquilados
+        ' 
+        lblAlquilados.BorderStyle = BorderStyle.Fixed3D
+        lblAlquilados.Location = New Point(3, 373)
+        lblAlquilados.Name = "lblAlquilados"
+        lblAlquilados.Size = New Size(148, 34)
+        lblAlquilados.TabIndex = 6
+        lblAlquilados.Text = "Alquilado"
+        ' 
+        ' lblCorreo
+        ' 
+        lblCorreo.BorderStyle = BorderStyle.Fixed3D
+        lblCorreo.Location = New Point(3, 328)
+        lblCorreo.Name = "lblCorreo"
+        lblCorreo.Size = New Size(148, 34)
+        lblCorreo.TabIndex = 5
+        lblCorreo.Text = "Correo"
         ' 
         ' lblApel
         ' 
@@ -693,34 +721,6 @@ Partial Class Cliente
         PictureBox15.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox15.TabIndex = 0
         PictureBox15.TabStop = False
-        ' 
-        ' lblCorreo
-        ' 
-        lblCorreo.BorderStyle = BorderStyle.Fixed3D
-        lblCorreo.Location = New Point(3, 328)
-        lblCorreo.Name = "lblCorreo"
-        lblCorreo.Size = New Size(148, 34)
-        lblCorreo.TabIndex = 5
-        lblCorreo.Text = "Correo"
-        ' 
-        ' lblAlquilados
-        ' 
-        lblAlquilados.BorderStyle = BorderStyle.Fixed3D
-        lblAlquilados.Location = New Point(3, 373)
-        lblAlquilados.Name = "lblAlquilados"
-        lblAlquilados.Size = New Size(148, 34)
-        lblAlquilados.TabIndex = 6
-        lblAlquilados.Text = "Alquilado"
-        ' 
-        ' lblBien
-        ' 
-        lblBien.BorderStyle = BorderStyle.Fixed3D
-        lblBien.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblBien.Location = New Point(3, 151)
-        lblBien.Name = "lblBien"
-        lblBien.Size = New Size(148, 34)
-        lblBien.TabIndex = 7
-        lblBien.Text = "Bienvenido"
         ' 
         ' Cliente
         ' 
