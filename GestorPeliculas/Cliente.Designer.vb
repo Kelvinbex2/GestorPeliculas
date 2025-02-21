@@ -156,7 +156,7 @@ Partial Class Cliente
         Panel7.Controls.Add(PictureBox16)
         Panel7.Location = New Point(3, 0)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(158, 447)
+        Panel7.Size = New Size(184, 412)
         Panel7.TabIndex = 3
         ' 
         ' lblBien
@@ -165,9 +165,10 @@ Partial Class Cliente
         lblBien.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblBien.Location = New Point(3, 151)
         lblBien.Name = "lblBien"
-        lblBien.Size = New Size(148, 34)
+        lblBien.Size = New Size(174, 74)
         lblBien.TabIndex = 7
         lblBien.Text = "Bienvenido"
+        lblBien.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblAlquilados
         ' 
@@ -175,9 +176,10 @@ Partial Class Cliente
         lblAlquilados.Font = New Font("Segoe UI", 10F)
         lblAlquilados.Location = New Point(3, 373)
         lblAlquilados.Name = "lblAlquilados"
-        lblAlquilados.Size = New Size(148, 34)
+        lblAlquilados.Size = New Size(174, 34)
         lblAlquilados.TabIndex = 6
         lblAlquilados.Text = "Alquilado"
+        lblAlquilados.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblCorreo
         ' 
@@ -185,9 +187,10 @@ Partial Class Cliente
         lblCorreo.Font = New Font("Segoe UI", 10F)
         lblCorreo.Location = New Point(3, 328)
         lblCorreo.Name = "lblCorreo"
-        lblCorreo.Size = New Size(148, 34)
+        lblCorreo.Size = New Size(174, 34)
         lblCorreo.TabIndex = 5
         lblCorreo.Text = "Correo"
+        lblCorreo.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblApel
         ' 
@@ -195,9 +198,10 @@ Partial Class Cliente
         lblApel.Font = New Font("Segoe UI", 10F)
         lblApel.Location = New Point(3, 276)
         lblApel.Name = "lblApel"
-        lblApel.Size = New Size(148, 34)
+        lblApel.Size = New Size(174, 34)
         lblApel.TabIndex = 4
         lblApel.Text = "Apellidos"
+        lblApel.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblNombre
         ' 
@@ -205,17 +209,18 @@ Partial Class Cliente
         lblNombre.Font = New Font("Segoe UI", 10F)
         lblNombre.Location = New Point(3, 230)
         lblNombre.Name = "lblNombre"
-        lblNombre.Size = New Size(148, 34)
+        lblNombre.Size = New Size(174, 34)
         lblNombre.TabIndex = 3
         lblNombre.Text = "Nombre"
+        lblNombre.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' PictureBox16
         ' 
         PictureBox16.Image = CType(resources.GetObject("PictureBox16.Image"), Image)
         PictureBox16.InitialImage = Nothing
-        PictureBox16.Location = New Point(12, 8)
+        PictureBox16.Location = New Point(7, 3)
         PictureBox16.Name = "PictureBox16"
-        PictureBox16.Size = New Size(124, 119)
+        PictureBox16.Size = New Size(161, 145)
         PictureBox16.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox16.TabIndex = 2
         PictureBox16.TabStop = False
@@ -731,7 +736,7 @@ Partial Class Cliente
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Lavender
-        ClientSize = New Size(708, 450)
+        ClientSize = New Size(708, 419)
         Controls.Add(Panel16)
         Controls.Add(Panel15)
         Controls.Add(Panel13)
