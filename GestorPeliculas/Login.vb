@@ -26,7 +26,7 @@
         Else
             If nombreUsuario <> "" Then
                 ' Obtener el DNI del cliente (usamos la función para obtener el DNI)
-                Dim dni As String = Cliente.ObtenerDniPorEmail(usuario)
+                Dim dni As String = GestorClientes.ObtenerDniPorEmail(usuario)
 
                 ' Crear una instancia del formulario Cliente
                 Dim clienteForm As New Cliente()
