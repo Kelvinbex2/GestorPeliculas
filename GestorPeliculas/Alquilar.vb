@@ -133,11 +133,16 @@ Public Class Alquilar
                 End Using ' 🔥 Asegura que la transacción se cierre
 
                 MessageBox.Show("Película alquilada con éxito.")
+                ' Desmarcar el checkbox
+                CheckBox1.Checked = False
             End Using ' 🔥 Se cierra la conexión automáticamente
         End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Cliente.Show()
         Me.Close()
+        Cliente.CargarDatosCliente(dniCliente)
+
     End Sub
 End Class

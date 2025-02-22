@@ -28,6 +28,9 @@ Partial Class Listar
         ColumnHeader3 = New ColumnHeader()
         ColumnHeader4 = New ColumnHeader()
         ColumnHeader5 = New ColumnHeader()
+        MenuStrip1 = New MenuStrip()
+        SalirToolStripMenuItem = New ToolStripMenuItem()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' ListView1
@@ -35,9 +38,9 @@ Partial Class Listar
         ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3, ColumnHeader4, ColumnHeader5})
         ListView1.GridLines = True
         ListView1.HeaderStyle = ColumnHeaderStyle.Nonclickable
-        ListView1.Location = New Point(12, 12)
+        ListView1.Location = New Point(12, 27)
         ListView1.Name = "ListView1"
-        ListView1.Size = New Size(736, 426)
+        ListView1.Size = New Size(727, 411)
         ListView1.TabIndex = 0
         ListView1.UseCompatibleStateImageBehavior = False
         ListView1.View = View.Details
@@ -67,16 +70,36 @@ Partial Class Listar
         ColumnHeader5.Text = "Sipnosis"
         ColumnHeader5.Width = 500
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {SalirToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(766, 24)
+        MenuStrip1.TabIndex = 1
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' SalirToolStripMenuItem
+        ' 
+        SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        SalirToolStripMenuItem.Size = New Size(41, 20)
+        SalirToolStripMenuItem.Text = "Salir"
+        ' 
         ' Listar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(766, 450)
         Controls.Add(ListView1)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
         Name = "Listar"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Listar"
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents ListView1 As ListView
@@ -85,4 +108,6 @@ Partial Class Listar
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
 End Class
