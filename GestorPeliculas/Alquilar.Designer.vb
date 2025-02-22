@@ -24,6 +24,7 @@ Partial Class Alquilar
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Alquilar))
         Panel1 = New Panel()
+        Button1 = New Button()
         PictureBox5 = New PictureBox()
         PictureBox4 = New PictureBox()
         PictureBox3 = New PictureBox()
@@ -34,7 +35,6 @@ Partial Class Alquilar
         txtGen = New TextBox()
         txtDirec = New TextBox()
         ComboBox1 = New ComboBox()
-        Button1 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +62,16 @@ Partial Class Alquilar
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(297, 338)
         Panel1.TabIndex = 0
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Transparent
+        Button1.Location = New Point(3, 308)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(102, 23)
+        Button1.TabIndex = 13
+        Button1.Text = "Salir"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' PictureBox5
         ' 
@@ -162,16 +172,6 @@ Partial Class Alquilar
         ComboBox1.Size = New Size(179, 23)
         ComboBox1.TabIndex = 0
         ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.Transparent
-        Button1.Location = New Point(3, 308)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(102, 23)
-        Button1.TabIndex = 13
-        Button1.Text = "Salir"
-        Button1.UseVisualStyleBackColor = False
-        ' 
         ' Alquilar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -183,6 +183,7 @@ Partial Class Alquilar
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "Alquilar"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Alquilar"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

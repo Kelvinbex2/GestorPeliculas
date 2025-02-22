@@ -586,7 +586,7 @@ Partial Class Cliente
         btnConsul.Name = "btnConsul"
         btnConsul.Size = New Size(163, 49)
         btnConsul.TabIndex = 1
-        btnConsul.Text = "Consultar aquilado"
+        btnConsul.Text = "Consultar historial"
         btnConsul.UseVisualStyleBackColor = False
         ' 
         ' PictureBox11

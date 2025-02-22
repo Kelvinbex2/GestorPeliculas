@@ -26,6 +26,17 @@ Public Class Cliente
 
     End Sub
 
+    Private Sub btnDevolver_Click(sender As Object, e As EventArgs) Handles btndevolvr.Click
+        ' Verificar si lblDni tiene un valor antes de abrir Devolver
+        If String.IsNullOrEmpty(lblDni.Text) Then
+            MessageBox.Show("El DNI del cliente no está disponible. Intente iniciar sesión de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
 
-
+        ' Crear una instancia del formulario Devolver y pasar el DNI
+        Dim devolverForm As New Devolver()
+        devolverForm.dniCliente = lblDni.Text '  Pasar el DNI
+        devolverForm.Show()
+        Me.Hide()
+    End Sub
 End Class
