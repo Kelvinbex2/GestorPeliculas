@@ -71,9 +71,10 @@ Partial Class Listar
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(766, 450)
         Controls.Add(ListView1)
         Name = "Listar"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Listar"
         ResumeLayout(False)
     End Sub
