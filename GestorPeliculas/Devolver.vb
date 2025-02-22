@@ -4,9 +4,8 @@ Public Class Devolver
     Public dniCliente As String ' Variable pública para recibir el DNI del cliente
 
     Private Sub Devolver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtDni.Text = dniCliente ' Mostrar el DNI en el TextBox
-        txtDni.ReadOnly = True ' Evita que el usuario lo edite
-        CargarPeliculasAlquiladas() ' Cargar películas alquiladas
+        txtDni.Text = dniCliente
+        CargarPeliculasAlquiladas()
     End Sub
 
     Private Sub CargarPeliculasAlquiladas()

@@ -57,6 +57,67 @@ Module GestorClientes
 
 
 
+    ' Función para obtener y mostrar la información del cliente
+    Public Sub MostrarInformacionCliente(dniCliente As String, nombreCliente As String)
+            ' Validar que el DNI no esté vacío
+            If String.IsNullOrEmpty(dniCliente) Then
+                MessageBox.Show("No hay información disponible del cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            ' 🔹 Obtener la cantidad de películas alquiladas sin devolver
+            Dim peliculasPendientes As Integer = 0
+            Dim queryPendientes As String = "SELECT COUNT(*) FROM Alquiler WHERE dni = @dni AND devuelto = 'N'"
+
+            Using conn As SQLiteConnection = ObtenerConexion()
+                conn.Open()
+                Using cmd As New SQLiteCommand(queryPendientes, conn)
+                    cmd.Parameters.AddWithValue("@dni", dniCliente)
+                    peliculasPendientes = Convert.ToInt32(cmd.ExecuteScalar())
+                End Using
+            End Using
+
+            ' 🔹 Obtener el historial de alquileres
+            Dim historial As New List(Of String)
+            Dim queryHistorial As String = "SELECT Pelicula.titulo, Alquiler.fecha_alquiler, " &
+                                       "COALESCE(Alquiler.fecha_devo, 'No devuelto') AS fecha_devolucion " &
+                                       "FROM Alquiler INNER JOIN Pelicula ON Alquiler.id_pelicula = Pelicula.id_peli " &
+                                       "WHERE Alquiler.dni = @dni ORDER BY Alquiler.fecha_alquiler DESC"
+
+            Using conn As SQLiteConnection = ObtenerConexion()
+                conn.Open()
+                Using cmd As New SQLiteCommand(queryHistorial, conn)
+                    cmd.Parameters.AddWithValue("@dni", dniCliente)
+                    Using reader As SQLiteDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            Dim titulo As String = reader("titulo").ToString()
+                            Dim fechaAlquiler As String = reader("fecha_alquiler").ToString()
+                            Dim fechaDevolucion As String = reader("fecha_devolucion").ToString()
+                            historial.Add($"{titulo} (Alquilada: {fechaAlquiler} - Devuelta: {fechaDevolucion})")
+                        End While
+                    End Using
+                End Using
+            End Using
+
+            ' 🔹 Construir el mensaje con la información del cliente
+            Dim mensaje As String = $"📌 **Información del Cliente**" & vbCrLf & vbCrLf &
+                                $"👤 Nombre: {nombreCliente}" & vbCrLf &
+                                $"📄 DNI: {dniCliente}" & vbCrLf &
+                                $"🎬 Películas alquiladas sin devolver: {peliculasPendientes}" & vbCrLf & vbCrLf
+
+            ' 🔹 Agregar historial al mensaje
+            If historial.Count > 0 Then
+                mensaje &= "📜 **Historial de Alquileres:**" & vbCrLf & String.Join(vbCrLf, historial)
+            Else
+                mensaje &= "📜 No hay historial de alquileres."
+            End If
+
+            ' 🔹 Mostrar la información en un MessageBox
+            MessageBox.Show(mensaje, "Resumen de Actividades", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Sub
 
 
-End Module
+
+
+
+    End Module

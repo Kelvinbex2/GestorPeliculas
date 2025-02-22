@@ -58,6 +58,14 @@ Public Class Cliente
         Listar.Show()
 
     End Sub
+    Private Sub btnSobre_Click(sender As Object, e As EventArgs) Handles btnSobre.Click
+        ' Obtener el DNI y el nombre completo del cliente
+        Dim dniCliente As String = lblDni.Text
+        Dim nombreCliente As String = lblNombre.Text & " " & lblApel.Text
+
+        ' Llamar a la función del módulo para mostrar la información del cliente
+        MostrarInformacionCliente(dniCliente, nombreCliente)
+    End Sub
 
 
 End Class
