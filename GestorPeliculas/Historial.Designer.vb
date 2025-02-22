@@ -82,6 +82,7 @@ Partial Class Historial
         Controls.Add(ListView1)
         FormBorderStyle = FormBorderStyle.None
         Name = "Historial"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Historial"
         ResumeLayout(False)
     End Sub
