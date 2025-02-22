@@ -6,31 +6,37 @@ Module GestorClientes
 
     ' Función para obtener los datos del cliente a partir del DNI
     Public Sub CargarDatosCliente(dni As String, lblNombre As Label, lblApel As Label, lblCorreo As Label, lblAlquilados As Label)
-        Using conn As SQLiteConnection = ObtenerConexion()
+        Dim queryCliente As String = "SELECT nombre, apellidos, email FROM Cliente WHERE dni = @dni"
+        Dim queryPeliculas As String = "SELECT COUNT(*) FROM Alquiler WHERE dni = @dni AND devuelto = 'N'"
+        Dim dt As New DataTable()
+
+        Using conn As SQLiteConnection = ConexionBD.ObtenerConexion()
             conn.Open()
 
-            ' Obtener los datos del cliente (nombre, apellidos, email)
-            Dim cmd As New SQLiteCommand("SELECT nombre, apellidos, email FROM Cliente WHERE dni = @dni", conn)
-            cmd.Parameters.AddWithValue("@dni", dni)
-            Dim reader As SQLiteDataReader = cmd.ExecuteReader()
+            ' Obtener los datos del cliente
+            Using cmd As New SQLiteCommand(queryCliente, conn)
+                cmd.Parameters.AddWithValue("@dni", dni)
+                Using da As New SQLiteDataAdapter(cmd)
+                    da.Fill(dt)
+                End Using
+            End Using
 
-            If reader.Read() Then
-                ' Mostrar los datos en los controles (labels)
-                lblNombre.Text = reader("nombre").ToString()
-                lblApel.Text = reader("apellidos").ToString()
-                lblCorreo.Text = reader("email").ToString()
+            ' Verificar si se encontraron datos del cliente
+            If dt.Rows.Count > 0 Then
+                lblNombre.Text = dt.Rows(0)("nombre").ToString()
+                lblApel.Text = dt.Rows(0)("apellidos").ToString()
+                lblCorreo.Text = dt.Rows(0)("email").ToString()
             End If
 
-            ' Obtener el número de películas alquiladas (que no han sido devueltas)
-            Dim cmdPeliculas As New SQLiteCommand("SELECT COUNT(*) FROM Alquiler WHERE dni = @dni AND devuelto = 'N'", conn)
-            cmdPeliculas.Parameters.AddWithValue("@dni", dni)
-            Dim peliculasAlquiladas As Integer = Convert.ToInt32(cmdPeliculas.ExecuteScalar())
-
-            lblAlquilados.Text = "Películas alquiladas: " & peliculasAlquiladas.ToString()
-
-            conn.Close()
-        End Using
+            ' Obtener la cantidad de películas alquiladas que no han sido devueltas
+            Using cmdPeliculas As New SQLiteCommand(queryPeliculas, conn)
+                cmdPeliculas.Parameters.AddWithValue("@dni", dni)
+                Dim peliculasAlquiladas As Integer = Convert.ToInt32(cmdPeliculas.ExecuteScalar())
+                lblAlquilados.Text = "Películas alquiladas: " & peliculasAlquiladas.ToString()
+            End Using
+        End Using '  Se cierra la conexión automáticamente al salir del bloque Using
     End Sub
+
 
     ' Función para obtener el DNI del cliente a partir del correo electrónico
     Public Function ObtenerDniPorEmail(email As String) As String

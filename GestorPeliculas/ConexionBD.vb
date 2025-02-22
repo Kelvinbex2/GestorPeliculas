@@ -5,10 +5,10 @@ Imports System.Windows.Forms ' Necesario para MessageBox
 Module ConexionBD
     Private nombrebd As String = "videoClub.db"
     Private ruta As String = Path.GetFullPath(Path.Combine(Application.StartupPath, "..\..\..\..\videoClub.db"))
-    Private ReadOnly ConnectionString As String = "Data Source=" & ruta & "; Version=3;"
+    Private ReadOnly _conn As New SQLiteConnection("Data Source=" & ruta & "; Version=3;")
 
     Public Function ObtenerConexion() As SQLiteConnection
-        Dim con As New SQLiteConnection(ConnectionString)
+        Dim con As New SQLiteConnection(_conn)
         Return con
     End Function
 

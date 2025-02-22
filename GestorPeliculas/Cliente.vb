@@ -14,6 +14,10 @@ Public Class Cliente
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If ConexionBD.ObtenerConexion().State = ConnectionState.Open Then
+            ConexionBD.ObtenerConexion().Close()
+        End If
+
         Alquilar.Show()
         Me.Hide()
     End Sub

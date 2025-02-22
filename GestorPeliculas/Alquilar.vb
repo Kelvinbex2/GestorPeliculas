@@ -21,6 +21,7 @@ Public Class Alquilar
         For Each row As DataRow In dt.Rows
             ComboBox1.Items.Add(row("titulo").ToString())
         Next
+
     End Sub
 
 
@@ -48,7 +49,7 @@ Public Class Alquilar
         If dt.Rows.Count > 0 Then
             txtDirec.Text = dt.Rows(0)("director").ToString()
             txtGen.Text = dt.Rows(0)("genero").ToString()
-            txt.Text = dt.Rows(0)("año").ToString()
+            txtAño.Text = dt.Rows(0)("año").ToString()
         End If
     End Sub
 
@@ -59,7 +60,7 @@ Public Class Alquilar
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked Then
             ' Obtener el correo del cliente
-            Dim emailCliente As String
+            Dim emailCliente As String = Cliente.lblCorreo.ToString()
 
             If String.IsNullOrEmpty(emailCliente) Then
                 MessageBox.Show("No se encontró un DNI para este correo.")
@@ -71,54 +72,51 @@ Public Class Alquilar
 
             ' Consultar la película seleccionada para obtener su id y stock
             Dim query As String = "SELECT id_peli, stock FROM Pelicula WHERE titulo = @titulo"
-            Dim dt As New DataTable()
 
             Using conn As SQLiteConnection = ObtenerConexion()
                 conn.Open()
+
+                Dim idPeli As Integer = -1
+                Dim stock As Integer = 0
+
+                ' Obtener id_peli y stock en una sola consulta
                 Using cmd As New SQLiteCommand(query, conn)
                     cmd.Parameters.AddWithValue("@titulo", tituloPelicula)
-                    Using da As New SQLiteDataAdapter(cmd)
-                        da.Fill(dt)
+                    Using reader As SQLiteDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            idPeli = Convert.ToInt32(reader("id_peli"))
+                            stock = Convert.ToInt32(reader("stock"))
+                        End If
                     End Using
                 End Using
-            End Using
-
-            ' Verificar si la película existe
-            If dt.Rows.Count > 0 Then
-                Dim idPeli As Integer = Convert.ToInt32(dt.Rows(0)("id_peli"))
-                Dim stock As Integer = Convert.ToInt32(dt.Rows(0)("stock"))
 
                 ' Verificar si hay stock disponible
-                If stock > 0 Then
-                    ' Actualizar el stock en la base de datos
-                    Dim updateQuery As String = "UPDATE Pelicula SET stock = stock - 1 WHERE id_peli = @id_peli"
-                    Using conn As SQLiteConnection = ObtenerConexion()
-                        conn.Open()
-                        Using cmd As New SQLiteCommand(updateQuery, conn)
-                            cmd.Parameters.AddWithValue("@id_peli", idPeli)
-                            cmd.ExecuteNonQuery()
-                        End Using
-                    End Using
-
-                    ' Registrar el alquiler en la tabla Alquiler
-                    Dim alquilerQuery As String = "INSERT INTO Alquiler (dni, id_pelicula, fecha_alquiler, devuelto) VALUES ((SELECT dni FROM Cliente WHERE email = @clienteEmail), @idPeli, @fecha, 'N')"
-                    Using conn As SQLiteConnection = ObtenerConexion()
-                        conn.Open()
-                        Using cmd As New SQLiteCommand(alquilerQuery, conn)
-                            cmd.Parameters.AddWithValue("@clienteEmail", emailCliente)
-                            cmd.Parameters.AddWithValue("@idPeli", idPeli)
-                            cmd.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd"))
-                            cmd.ExecuteNonQuery()
-                        End Using
-                    End Using
-
-                    MessageBox.Show("Película alquilada con éxito.")
-                Else
-                    MessageBox.Show("No hay stock disponible.")
+                If idPeli = -1 OrElse stock = 0 Then
+                    MessageBox.Show("No hay stock disponible o la película no existe.")
+                    Exit Sub
                 End If
-            End If
+
+                ' Actualizar el stock en la base de datos
+                Dim updateQuery As String = "UPDATE Pelicula SET stock = stock - 1 WHERE id_peli = @id_peli"
+                Using cmd As New SQLiteCommand(updateQuery, conn)
+                    cmd.Parameters.AddWithValue("@id_peli", idPeli)
+                    cmd.ExecuteNonQuery()
+                End Using
+
+                ' Registrar el alquiler en la tabla Alquiler
+                Dim alquilerQuery As String = "INSERT INTO Alquiler (dni, id_pelicula, fecha_alquiler, devuelto) VALUES ((SELECT dni FROM Cliente WHERE email = @clienteEmail), @idPeli, @fecha, 'N')"
+                Using cmd As New SQLiteCommand(alquilerQuery, conn)
+                    cmd.Parameters.AddWithValue("@clienteEmail", emailCliente)
+                    cmd.Parameters.AddWithValue("@idPeli", idPeli)
+                    cmd.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd"))
+                    cmd.ExecuteNonQuery()
+                End Using
+
+                MessageBox.Show("Película alquilada con éxito.")
+            End Using ' 🔥 Esto garantiza que la conexión se cierre correctamente
         End If
     End Sub
+
 
 
 
