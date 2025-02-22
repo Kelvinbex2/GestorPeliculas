@@ -23,7 +23,7 @@ Public Class Cliente
         Dim alquilarForm As New Alquilar()
         alquilarForm.dniCliente = lblDni.Text ' 🔥 Pasar el DNI al formulario de Alquilar
         alquilarForm.Show()
-        Me.Hide()
+
     End Sub
 
 

@@ -27,6 +27,7 @@ Partial Class Cliente
         Button2 = New Button()
         PictureBox3 = New PictureBox()
         Panel7 = New Panel()
+        lblDni = New Label()
         lblBien = New Label()
         lblAlquilados = New Label()
         lblCorreo = New Label()
@@ -75,7 +76,6 @@ Partial Class Cliente
         Panel16 = New Panel()
         btnSal = New Button()
         PictureBox15 = New PictureBox()
-        lblDni = New Label()
         Panel3.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
@@ -160,6 +160,17 @@ Partial Class Cliente
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(184, 412)
         Panel7.TabIndex = 3
+        ' 
+        ' lblDni
+        ' 
+        lblDni.BorderStyle = BorderStyle.Fixed3D
+        lblDni.Font = New Font("Segoe UI", 10F)
+        lblDni.Location = New Point(3, 187)
+        lblDni.Name = "lblDni"
+        lblDni.Size = New Size(174, 34)
+        lblDni.TabIndex = 8
+        lblDni.Text = "Dni"
+        lblDni.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' lblBien
         ' 
@@ -732,17 +743,6 @@ Partial Class Cliente
         PictureBox15.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox15.TabIndex = 0
         PictureBox15.TabStop = False
-        ' 
-        ' lblDni
-        ' 
-        lblDni.BorderStyle = BorderStyle.Fixed3D
-        lblDni.Font = New Font("Segoe UI", 10F)
-        lblDni.Location = New Point(3, 187)
-        lblDni.Name = "lblDni"
-        lblDni.Size = New Size(174, 34)
-        lblDni.TabIndex = 8
-        lblDni.Text = "Dni"
-        lblDni.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Cliente
         ' 

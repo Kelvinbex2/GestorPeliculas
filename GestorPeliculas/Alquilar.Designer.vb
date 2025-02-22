@@ -24,28 +24,30 @@ Partial Class Alquilar
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Alquilar))
         Panel1 = New Panel()
+        PictureBox5 = New PictureBox()
+        PictureBox4 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        PictureBox1 = New PictureBox()
         txtAño = New TextBox()
+        CheckBox1 = New CheckBox()
         txtGen = New TextBox()
         txtDirec = New TextBox()
         ComboBox1 = New ComboBox()
-        CheckBox1 = New CheckBox()
-        PictureBox1 = New PictureBox()
-        PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
-        PictureBox4 = New PictureBox()
-        PictureBox5 = New PictureBox()
+        Button1 = New Button()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.Transparent
         Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(PictureBox5)
         Panel1.Controls.Add(PictureBox4)
         Panel1.Controls.Add(PictureBox3)
@@ -61,6 +63,60 @@ Partial Class Alquilar
         Panel1.Size = New Size(297, 338)
         Panel1.TabIndex = 0
         ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackColor = Color.GhostWhite
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(30, 249)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(20, 23)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox5.TabIndex = 12
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = Color.GhostWhite
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(30, 220)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(20, 23)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 11
+        PictureBox4.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = Color.GhostWhite
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(30, 191)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(20, 23)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 10
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackColor = Color.GhostWhite
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(30, 162)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(20, 23)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 9
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(72, 3)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(149, 131)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 1
+        PictureBox1.TabStop = False
+        ' 
         ' txtAño
         ' 
         txtAño.Font = New Font("Segoe UI", 9F)
@@ -69,6 +125,18 @@ Partial Class Alquilar
         txtAño.PlaceholderText = "Año"
         txtAño.Size = New Size(179, 23)
         txtAño.TabIndex = 3
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.BackColor = Color.White
+        CheckBox1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        CheckBox1.Location = New Point(155, 278)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(81, 19)
+        CheckBox1.TabIndex = 4
+        CheckBox1.Text = "¿Alquilar ?"
+        CheckBox1.UseVisualStyleBackColor = False
         ' 
         ' txtGen
         ' 
@@ -94,71 +162,15 @@ Partial Class Alquilar
         ComboBox1.Size = New Size(179, 23)
         ComboBox1.TabIndex = 0
         ' 
-        ' CheckBox1
+        ' Button1
         ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.BackColor = Color.White
-        CheckBox1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        CheckBox1.Location = New Point(155, 278)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(81, 19)
-        CheckBox1.TabIndex = 4
-        CheckBox1.Text = "¿Alquilar ?"
-        CheckBox1.UseVisualStyleBackColor = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(72, 3)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(149, 131)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 1
-        PictureBox1.TabStop = False
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.BackColor = Color.GhostWhite
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(30, 162)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(20, 23)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 9
-        PictureBox2.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.GhostWhite
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(30, 191)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(20, 23)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 10
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.BackColor = Color.GhostWhite
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(30, 220)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(20, 23)
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.TabIndex = 11
-        PictureBox4.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.BackColor = Color.GhostWhite
-        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(30, 249)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(20, 23)
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.TabIndex = 12
-        PictureBox5.TabStop = False
+        Button1.BackColor = Color.Transparent
+        Button1.Location = New Point(3, 308)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(102, 23)
+        Button1.TabIndex = 13
+        Button1.Text = "Salir"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Alquilar
         ' 
@@ -168,16 +180,17 @@ Partial Class Alquilar
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(551, 450)
         Controls.Add(Panel1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "Alquilar"
         Text = "Alquilar"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -192,6 +205,7 @@ Partial Class Alquilar
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button1 As Button
 
 
 End Class
