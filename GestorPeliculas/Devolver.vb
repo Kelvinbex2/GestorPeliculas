@@ -45,7 +45,7 @@ Public Class Devolver
 
             ' Llamar a la función del módulo para devolver la película
             If DevolverPelicula(dniCliente, tituloPelicula) Then
-                CargarPeliculasAlquiladas() ' 🔥 Actualizar la lista de películas
+                CargarPeliculasAlquiladas() '  Actualizar la lista de películas
             End If
 
             ' Desmarcar el checkbox
