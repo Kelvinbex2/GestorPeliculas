@@ -219,7 +219,7 @@ Partial Class Registrar
         ' 
         ' btmAtras
         ' 
-        btmAtras.BackColor = Color.GhostWhite
+        btmAtras.BackColor = Color.Transparent
         btmAtras.BackgroundImage = CType(resources.GetObject("btmAtras.BackgroundImage"), Image)
         btmAtras.BackgroundImageLayout = ImageLayout.Stretch
         btmAtras.FlatAppearance.BorderSize = 0
