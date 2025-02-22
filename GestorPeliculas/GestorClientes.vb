@@ -5,8 +5,8 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Module GestorClientes
 
     ' Función para obtener los datos del cliente a partir del DNI
-    Public Sub CargarDatosCliente(dni As String, lblNombre As Label, lblApel As Label, lblCorreo As Label, lblAlquilados As Label)
-        Dim queryCliente As String = "SELECT nombre, apellidos, email FROM Cliente WHERE dni = @dni"
+    Public Sub CargarDatosCliente(dni As String, lblDni As Label, lblNombre As Label, lblApel As Label, lblCorreo As Label, lblAlquilados As Label)
+        Dim queryCliente As String = "SELECT dni, nombre, apellidos, email FROM Cliente WHERE dni = @dni"
         Dim queryPeliculas As String = "SELECT COUNT(*) FROM Alquiler WHERE dni = @dni AND devuelto = 'N'"
         Dim dt As New DataTable()
 
@@ -23,6 +23,7 @@ Module GestorClientes
 
             ' Verificar si se encontraron datos del cliente
             If dt.Rows.Count > 0 Then
+                lblDni.Text = dt.Rows(0)("dni").ToString() ' 🔥 Asegurar que se actualiza correctamente
                 lblNombre.Text = dt.Rows(0)("nombre").ToString()
                 lblApel.Text = dt.Rows(0)("apellidos").ToString()
                 lblCorreo.Text = dt.Rows(0)("email").ToString()
@@ -36,6 +37,7 @@ Module GestorClientes
             End Using
         End Using '  Se cierra la conexión automáticamente al salir del bloque Using
     End Sub
+
 
 
     ' Función para obtener el DNI del cliente a partir del correo electrónico

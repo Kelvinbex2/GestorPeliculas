@@ -75,6 +75,7 @@ Partial Class Cliente
         Panel16 = New Panel()
         btnSal = New Button()
         PictureBox15 = New PictureBox()
+        lblDni = New Label()
         Panel3.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
@@ -148,6 +149,7 @@ Partial Class Cliente
         ' Panel7
         ' 
         Panel7.BorderStyle = BorderStyle.Fixed3D
+        Panel7.Controls.Add(lblDni)
         Panel7.Controls.Add(lblBien)
         Panel7.Controls.Add(lblAlquilados)
         Panel7.Controls.Add(lblCorreo)
@@ -163,9 +165,9 @@ Partial Class Cliente
         ' 
         lblBien.BorderStyle = BorderStyle.Fixed3D
         lblBien.Font = New Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblBien.Location = New Point(3, 151)
+        lblBien.Location = New Point(-2, 128)
         lblBien.Name = "lblBien"
-        lblBien.Size = New Size(174, 74)
+        lblBien.Size = New Size(184, 40)
         lblBien.TabIndex = 7
         lblBien.Text = "Bienvenido"
         lblBien.TextAlign = ContentAlignment.MiddleCenter
@@ -218,9 +220,9 @@ Partial Class Cliente
         ' 
         PictureBox16.Image = CType(resources.GetObject("PictureBox16.Image"), Image)
         PictureBox16.InitialImage = Nothing
-        PictureBox16.Location = New Point(7, 3)
+        PictureBox16.Location = New Point(12, 3)
         PictureBox16.Name = "PictureBox16"
-        PictureBox16.Size = New Size(161, 145)
+        PictureBox16.Size = New Size(147, 121)
         PictureBox16.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox16.TabIndex = 2
         PictureBox16.TabStop = False
@@ -731,6 +733,17 @@ Partial Class Cliente
         PictureBox15.TabIndex = 0
         PictureBox15.TabStop = False
         ' 
+        ' lblDni
+        ' 
+        lblDni.BorderStyle = BorderStyle.Fixed3D
+        lblDni.Font = New Font("Segoe UI", 10F)
+        lblDni.Location = New Point(3, 187)
+        lblDni.Name = "lblDni"
+        lblDni.Size = New Size(174, 34)
+        lblDni.TabIndex = 8
+        lblDni.Text = "Dni"
+        lblDni.TextAlign = ContentAlignment.MiddleLeft
+        ' 
         ' Cliente
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -840,4 +853,5 @@ Partial Class Cliente
     Friend WithEvents lblBien As Label
     Friend WithEvents lblAlquilados As Label
     Friend WithEvents lblCorreo As Label
+    Friend WithEvents lblDni As Label
 End Class
