@@ -80,6 +80,7 @@ Partial Class Historial
         ClientSize = New Size(599, 348)
         Controls.Add(btnCerrar)
         Controls.Add(ListView1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Historial"
         Text = "Historial"
         ResumeLayout(False)
