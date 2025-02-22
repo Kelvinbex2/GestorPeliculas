@@ -23,10 +23,10 @@ Partial Class Devolver
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Button1 = New Button()
         CheckBoxDev = New CheckBox()
         txtDni = New TextBox()
         Titulo = New ComboBox()
-        Button1 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -41,6 +41,15 @@ Partial Class Devolver
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(240, 194)
         Panel1.TabIndex = 0
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(163, 164)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 3
+        Button1.Text = "Salir"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' CheckBoxDev
         ' 
@@ -68,21 +77,13 @@ Partial Class Devolver
         Titulo.Size = New Size(121, 23)
         Titulo.TabIndex = 0
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(158, 164)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 3
-        Button1.Text = "Salir"
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' Devolver
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(336, 239)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Devolver"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Devolver"
