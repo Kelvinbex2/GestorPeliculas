@@ -141,8 +141,9 @@ Public Class Alquilar
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Cliente.Show()
-        Me.Close()
         Cliente.CargarDatosCliente(dniCliente)
+        Me.Close()
+
 
     End Sub
 End Class
