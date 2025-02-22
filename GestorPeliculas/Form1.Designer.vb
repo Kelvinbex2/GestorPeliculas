@@ -28,6 +28,7 @@ Partial Class Form1
         Label1 = New Label()
         Timer1 = New Timer(components)
         PictureBox1 = New PictureBox()
+        Label2 = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -67,12 +68,22 @@ Partial Class Form1
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
         ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(150, 333)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(41, 15)
+        Label2.TabIndex = 3
+        Label2.Text = "Label2"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSeaGreen
         ClientSize = New Size(800, 450)
+        Controls.Add(Label2)
         Controls.Add(PictureBox1)
         Controls.Add(Label1)
         Controls.Add(ProgressBar1)
@@ -89,5 +100,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label2 As Label
 
 End Class

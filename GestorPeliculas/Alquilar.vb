@@ -73,7 +73,7 @@ Public Class Alquilar
             Using conn As SQLiteConnection = ObtenerConexion()
                 conn.Open()
 
-                ' 🔹 Obtener el DNI del cliente a partir del correo
+                '  Obtener el DNI del cliente a partir del correo
                 Dim dniCliente As String = ""
                 Dim queryDni As String = "SELECT dni FROM Cliente WHERE dni = @dni"
 
@@ -88,7 +88,7 @@ Public Class Alquilar
                     End If
                 End Using
 
-                ' 🔹 Obtener id_peli y stock
+                '  Obtener id_peli y stock
                 Dim idPeli As Integer = -1
                 Dim stock As Integer = 0
                 Dim query As String = "SELECT id_peli, stock FROM Pelicula WHERE titulo = @titulo"
@@ -109,17 +109,17 @@ Public Class Alquilar
                     Exit Sub
                 End If
 
-                ' 🔹 Iniciar transacción para asegurar la atomicidad
+                '  Iniciar transacción para asegurar la atomicidad
                 Using transaction = conn.BeginTransaction()
 
-                    ' 🔹 Actualizar el stock en la base de datos
+                    '  Actualizar el stock en la base de datos
                     Dim updateQuery As String = "UPDATE Pelicula SET stock = stock - 1 WHERE id_peli = @id_peli"
                     Using cmd As New SQLiteCommand(updateQuery, conn, transaction)
                         cmd.Parameters.AddWithValue("@id_peli", idPeli)
                         cmd.ExecuteNonQuery()
                     End Using
 
-                    ' 🔹 Registrar el alquiler en la tabla Alquiler con el DNI obtenido
+                    '  Registrar el alquiler en la tabla Alquiler con el DNI obtenido
                     Dim alquilerQuery As String = "INSERT INTO Alquiler (dni, id_pelicula, fecha_alquiler, devuelto) VALUES (@dni, @idPeli, @fecha, 'N')"
                     Using cmd As New SQLiteCommand(alquilerQuery, conn, transaction)
                         cmd.Parameters.AddWithValue("@dni", dniCliente)
@@ -128,7 +128,7 @@ Public Class Alquilar
                         cmd.ExecuteNonQuery()
                     End Using
 
-                    ' 🔹 Confirmar la transacción
+                    '  Confirmar la transacción
                     transaction.Commit()
                 End Using ' 🔥 Asegura que la transacción se cierre
 

@@ -11,7 +11,7 @@
         If progressValue < 100 Then
             progressValue += 1
             ProgressBar1.Value = progressValue
-
+            Label2.Text = "Cargando " & progressValue & "%"
         Else
             Timer1.Stop()
 
