@@ -62,7 +62,7 @@ Partial Class Cliente
         Button8 = New Button()
         PictureBox10 = New PictureBox()
         Panel12 = New Panel()
-        btnConsul = New Button()
+        btnHistorial = New Button()
         PictureBox11 = New PictureBox()
         Panel13 = New Panel()
         Button10 = New Button()
@@ -567,27 +567,27 @@ Partial Class Cliente
         ' Panel12
         ' 
         Panel12.BorderStyle = BorderStyle.Fixed3D
-        Panel12.Controls.Add(btnConsul)
+        Panel12.Controls.Add(btnHistorial)
         Panel12.Controls.Add(PictureBox11)
         Panel12.Location = New Point(531, 46)
         Panel12.Name = "Panel12"
         Panel12.Size = New Size(161, 181)
         Panel12.TabIndex = 7
         ' 
-        ' btnConsul
+        ' btnHistorial
         ' 
-        btnConsul.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        btnConsul.FlatAppearance.BorderColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        btnConsul.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        btnConsul.FlatAppearance.MouseOverBackColor = Color.Silver
-        btnConsul.FlatStyle = FlatStyle.Flat
-        btnConsul.Font = New Font("Segoe UI", 12F)
-        btnConsul.Location = New Point(-2, 128)
-        btnConsul.Name = "btnConsul"
-        btnConsul.Size = New Size(163, 49)
-        btnConsul.TabIndex = 1
-        btnConsul.Text = "Consultar historial"
-        btnConsul.UseVisualStyleBackColor = False
+        btnHistorial.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        btnHistorial.FlatAppearance.BorderColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        btnHistorial.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        btnHistorial.FlatAppearance.MouseOverBackColor = Color.Silver
+        btnHistorial.FlatStyle = FlatStyle.Flat
+        btnHistorial.Font = New Font("Segoe UI", 12F)
+        btnHistorial.Location = New Point(-2, 128)
+        btnHistorial.Name = "btnHistorial"
+        btnHistorial.Size = New Size(156, 49)
+        btnHistorial.TabIndex = 1
+        btnHistorial.Text = "Consultar historial"
+        btnHistorial.UseVisualStyleBackColor = False
         ' 
         ' PictureBox11
         ' 
@@ -833,7 +833,7 @@ Partial Class Cliente
     Friend WithEvents Button8 As Button
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Panel12 As Panel
-    Friend WithEvents btnConsul As Button
+    Friend WithEvents btnHistorial As Button
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Button10 As Button
