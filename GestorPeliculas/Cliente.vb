@@ -21,7 +21,7 @@ Public Class Cliente
         alquilarForm.dniCliente = lblDni.Text '  Pasar el DNI al formulario de Alquilar
         alquilarForm.Show()
 
-
+        Me.Hide()
     End Sub
 
     Private Sub btnDevolver_Click(sender As Object, e As EventArgs) Handles btndevolvr.Click
@@ -35,7 +35,7 @@ Public Class Cliente
         Dim devolverForm As New Devolver()
         devolverForm.dniCliente = lblDni.Text '  Pasar el DNI
         devolverForm.Show()
-
+        Me.Hide()
     End Sub
 
 
