@@ -2,6 +2,7 @@
 
 Public Class Consultar
     Private Sub Consultar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Administrador.CargarPeliculasEnListView(ListViewPeliculas)
         Administrador.CargarAlquileresEnListView(ListViewAlquiler)
     End Sub
@@ -49,6 +50,6 @@ Public Class Consultar
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         admin.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class
